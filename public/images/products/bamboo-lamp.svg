@@ -1,0 +1,13 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#F5F5F5"/>
+  <circle cx="200" cy="120" r="80" fill="#FFF8DC" stroke="#DEB887" stroke-width="3"/>
+  <rect x="190" y="200" width="20" height="120" fill="#DEB887"/>
+  <rect x="185" y="205" width="5" height="110" fill="#CD853F"/>
+  <rect x="210" y="205" width="5" height="110" fill="#CD853F"/>
+  <ellipse cx="200" cy="340" rx="40" ry="10" fill="#8B4513"/>
+  <ellipse cx="200" cy="335" rx="35" ry="8" fill="#A0522D"/>
+  <path d="M130 120 Q200 80 270 120" stroke="#F0E68C" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M140 130 Q200 90 260 130" stroke="#F0E68C" stroke-width="2" fill="none" opacity="0.4"/>
+  <circle cx="200" cy="120" r="5" fill="#DEB887"/>
+  <text x="200" y="380" text-anchor="middle" font-family="serif" font-size="16" fill="#666">Bamboo Table Lamp</text>
+</svg>
