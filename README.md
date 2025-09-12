@@ -1,4 +1,4 @@
-# CozCraft - Handicraft Trading Website
+# CozCastle - Handicraft Trading Website
 
 A modern, professional trading website for handcrafted products built with React, Vite, and Tailwind CSS.
 
@@ -115,4 +115,4 @@ Create new page components in the `pages/` directory and import them in `App.jsx
 
 ## License
 
-This project is created for trading handicraft products and follows modern web development best practices.
+This project is created for trading handicastle products and follows modern web development best practices.

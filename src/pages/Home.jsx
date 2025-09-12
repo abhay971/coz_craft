@@ -14,79 +14,80 @@ const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      name: "Handwoven Tote Bag",
-      price: "₹2,899",
+      name: "Tote Bag - Handcrafted",
       image: "/images/products/Handwoven_Tote_Bag.png",
-      category: "Bags",
-      rating: 4.8,
-      reviews: 124,
+      category: "Fabrics and Stoles",
+      supplier: "Artisan Collective Ltd",
+      location: "Jaipur, India",
+      type: "handcrafted"
     },
     {
       id: 2,
-      name: "Bamboo Table Lamp",
-      price: "₹5,199",
-      image: "/images/products/Modern_Bamboo_Table_Lamp.png",
-      category: "Lighting",
-      rating: 4.9,
-      reviews: 89,
+      name: "Coffee Maker",
+      image: "/images/products/Modern_Coffee_Maker.png",
+      category: "Furniture",
+      supplier: "Modern Home Solutions",
+      location: "Mumbai, India",
+      type: "machine"
     },
     {
       id: 3,
-      name: "Ceramic Bowl Set",
-      price: "₹3,099",
+      name: "Ceramic Bowl Set - Handcrafted",
       image: "/images/products/Handmade_Ceramic_Bowls_Set.png",
-      category: "Kitchenware",
-      rating: 4.7,
-      reviews: 156,
+      category: "Utensils",
+      supplier: "Traditional Pottery Works",
+      location: "Khurja, India",
+      type: "handcrafted"
     },
     {
       id: 4,
-      name: "Wicker Storage Basket",
-      price: "₹2,129",
-      image: "/images/products/Wicker_Storage_Basket.png",
-      category: "Storage",
-      rating: 4.6,
-      reviews: 203,
+      name: "LED Floor Lamp",
+      image: "/images/products/Smart_LED_Floor_Lamp.png",
+      category: "Lights",
+      supplier: "Tech Lighting Co",
+      location: "Delhi, India",
+      type: "machine"
     },
   ];
 
   const features = [
     {
       icon: Award,
-      title: "Premium Quality",
+      title: "Verified Suppliers",
       description:
-        "Each product is carefully crafted by skilled artisans using the finest materials.",
+        "Connect with trusted manufacturers and artisans verified for quality and reliability in global trade.",
       color: "text-brand-orange",
     },
     {
       icon: Users,
-      title: "Artisan Made",
+      title: "Global Network",
       description:
-        "Supporting local craftspeople and preserving traditional techniques.",
+        "Access a worldwide network of businesses trading in handcrafted and machine-made products.",
       color: "text-brand-blue",
     },
     {
       icon: Truck,
-      title: "Fast Shipping",
+      title: "Trade Support",
       description:
-        "Free worldwide shipping on orders over $100 with express delivery options.",
+        "Complete B2B trading support from supplier discovery to order fulfillment and logistics.",
       color: "text-brand-green",
     },
   ];
 
   const stats = [
-    { number: "10,000+", label: "Happy Customers" },
-    { number: "500+", label: "Unique Products" },
-    { number: "50+", label: "Skilled Artisans" },
-    { number: "4.9", label: "Average Rating" },
+    { number: "5,000+", label: "Active Suppliers" },
+    { number: "15,000+", label: "Product Categories" },
+    { number: "25+", label: "Countries Connected" },
+    { number: "98%", label: "Trade Success Rate" },
   ];
 
   return (
-    <div className="min-h-screen max-w-full overflow-x-hidden">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white"
+        style={{ overflowX: 'hidden' }}
       >
         <motion.div
           className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"
@@ -109,8 +110,8 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
               >
-                Crafting Unique
-                <span className="block text-black">Treasures</span>
+                Global B2B Trading
+                <span className="block text-black">Platform</span>
               </motion.h1>
 
               <motion.p
@@ -119,9 +120,9 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Discover authentic handcrafted products that bring warmth and
-                character to your space. Each piece tells a story of traditional
-                artistry and modern design.
+                Connect businesses worldwide through our comprehensive B2B trading platform. 
+                Discover quality handcrafted and machine-made products from trusted suppliers 
+                and expand your business network globally.
               </motion.p>
 
               <motion.div
@@ -135,7 +136,7 @@ const Home = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Shop Now
+                  Start Trading
                   <ArrowRight
                     className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
                     size={18}
@@ -147,7 +148,7 @@ const Home = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Learn Our Story
+                  Join Network
                 </motion.button>
               </motion.div>
             </motion.div>
@@ -203,14 +204,14 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-6 xl:px-12 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-6 xl:px-12 bg-white" style={{ overflowX: 'hidden' }}>
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={featuresRef}
             className="scroll-animate text-center mb-16"
           >
             <h2 className="section-title text-center">
-              Why Choose <span className="text-black font-bold">COZ CRAFT</span>
+              Why Choose <span className="text-black font-bold">COZ CASTLE</span>
               ?
             </h2>
             <p className="section-subtitle text-center max-w-2xl mx-auto">
@@ -242,10 +243,10 @@ const Home = () => {
                   <div
                     className={`inline-flex p-3 lg:p-4 rounded-full mb-4 lg:mb-6 ${
                       index === 0
-                        ? "bg-brand-orange"
+                        ? "bg-[#F37E3A]"
                         : index === 1
-                        ? "bg-brand-blue"
-                        : "bg-brand-green"
+                        ? "bg-[#288EC2]"
+                        : "bg-[#6EBD49]"
                     } text-white shadow-lg`}
                   >
                     <Icon size={28} className="lg:w-8 lg:h-8" />
@@ -271,9 +272,10 @@ const Home = () => {
               Featured <span className="text-black font-bold">Products</span>
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 text-center max-w-2xl lg:max-w-3xl mx-auto">
-              Discover our most loved handcrafted pieces, each one{" "}
-              <span className="text-black font-semibold">unique</span> and made
-              with <span className="text-black font-semibold">care</span>.
+              Connect with{" "}
+              <span className="text-black font-semibold">verified suppliers</span> offering{" "}
+              <span className="text-black font-semibold">handcrafted</span> and{" "}
+              <span className="text-black font-semibold">machine-made</span> products for B2B trade opportunities worldwide.
             </p>
           </div>
 
@@ -294,11 +296,13 @@ const Home = () => {
                     alt={product.name}
                     className="w-full h-56 sm:h-64 lg:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 lg:top-4 left-3 lg:left-4 bg-brand-orange text-white px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm font-bold shadow-lg">
-                    {product.category}
+                  <div className={`absolute top-3 lg:top-4 left-3 lg:left-4 text-white px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm font-bold shadow-lg ${
+                    product.type === 'handcrafted' ? 'bg-[#F37E3A]' : 'bg-[#288EC2]'
+                  }`}>
+                    {product.type === 'handcrafted' ? 'Handcrafted' : 'Modern'}
                   </div>
                   <div className="absolute top-3 lg:top-4 right-3 lg:right-4 bg-white/90 backdrop-blur-sm rounded-full p-1.5 lg:p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Star className="text-brand-orange" size={14} />
+                    <Star className="text-black" size={14} />
                   </div>
                 </div>
 
@@ -307,23 +311,13 @@ const Home = () => {
                     {product.name}
                   </h3>
 
-                  <div className="flex items-center mb-3 lg:mb-4">
-                    <div className="flex text-gray-400">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={12}
-                          className={
-                            i < Math.floor(product.rating)
-                              ? "text-black fill-current"
-                              : "text-gray-300"
-                          }
-                        />
-                      ))}
-                    </div>
-                    <span className="text-xs lg:text-sm text-gray-600 ml-2 font-medium">
-                      ({product.reviews} reviews)
-                    </span>
+                  <div className="mb-3 lg:mb-4">
+                    <p className="text-xs lg:text-sm text-gray-600 font-medium">
+                      Supplier: {product.supplier}
+                    </p>
+                    <p className="text-xs lg:text-sm text-gray-500">
+                      📍 {product.location}
+                    </p>
                   </div>
 
                   <div className="text-center">
@@ -332,7 +326,7 @@ const Home = () => {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      View Details
+                      Contact Supplier
                     </motion.button>
                   </div>
                 </div>
@@ -371,12 +365,12 @@ const Home = () => {
                 <div
                   className={`absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 lg:w-12 h-1 rounded ${
                     index === 0
-                      ? "bg-brand-orange"
+                      ? "bg-[#F37E3A]"
                       : index === 1
-                      ? "bg-brand-blue"
+                      ? "bg-[#288EC2]"
                       : index === 2
-                      ? "bg-brand-green"
-                      : "bg-brand-orange"
+                      ? "bg-[#6EBD49]"
+                      : "bg-[#F37E3A]"
                   }`}
                 ></div>
               </motion.div>

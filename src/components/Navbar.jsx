@@ -16,7 +16,16 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'Products', href: '#products' },
+    { 
+      name: 'Products', 
+      href: '#products',
+      hasDropdown: true,
+      dropdownItems: [
+        { name: 'All Products', href: '#products' },
+        { name: 'Handcrafted Collection', href: '#products?category=handcrafted' },
+        { name: 'Modern Collection', href: '#products?category=modern' },
+      ]
+    },
     { name: 'About', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -41,8 +50,8 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <img 
-              src="/images/logo/COZ_CRAFT_BLACK.png" 
-              alt="COZ CRAFT" 
+              src="/images/logo/COZ_CASTLE_BLACK.png" 
+              alt="COZ CASTLE" 
               className="h-10 w-auto"
             />
           </motion.div>
@@ -50,23 +59,46 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                className="text-black hover:text-gray-700 transition-colors duration-300 font-medium relative"
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
-              >
-                {item.name}
-                <motion.div
-                  className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F37E3A] origin-left"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.3 }}
-                />
-              </motion.a>
+              <div key={item.name} className="relative group">
+                <motion.a
+                  href={item.href}
+                  className="text-black hover:text-gray-700 transition-colors duration-300 font-medium relative flex items-center"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  {item.name}
+                  {item.hasDropdown && (
+                    <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-full h-0.5 bg-[#F37E3A] origin-left"
+                    initial={{ scaleX: 0 }}
+                    whileHover={{ scaleX: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                </motion.a>
+                
+                {/* Dropdown Menu */}
+                {item.hasDropdown && (
+                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="py-2">
+                      {item.dropdownItems.map((dropdownItem, dropdownIndex) => (
+                        <a
+                          key={dropdownItem.name}
+                          href={dropdownItem.href}
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#F37E3A] transition-colors duration-200"
+                        >
+                          {dropdownItem.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

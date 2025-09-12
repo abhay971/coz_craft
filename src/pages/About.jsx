@@ -12,7 +12,7 @@ const About = () => {
   const values = [
     {
       icon: Heart,
-      title: 'Passion for Craft',
+      title: 'Passion for Castle',
       description: 'Every product is made with love and dedication, preserving traditional techniques passed down through generations.',
       color: 'text-brand-orange'
     },
@@ -41,7 +41,7 @@ const About = () => {
       name: 'Sarah Johnson',
       role: 'Founder & CEO',
       image: '/api/placeholder/300/300',
-      bio: 'With 15 years in sustainable design, Sarah founded COZ CRAFT to bridge traditional craftsmanship with modern living.',
+      bio: 'With 15 years in sustainable design, Sarah founded COZ CASTLE to bridge traditional craftsmanship with modern living.',
       social: { linkedin: '#', instagram: '#' }
     },
     {
@@ -68,8 +68,8 @@ const About = () => {
   ];
 
   const milestones = [
-    { year: '2018', event: 'COZ CRAFT Founded', description: 'Started with a vision to connect artisans with design lovers' },
-    { year: '2019', event: 'First 100 Artisans', description: 'Built partnerships with craftspeople across 5 countries' },
+    { year: '2018', event: 'COZ CASTLE Founded', description: 'Started with a vision to connect artisans with design lovers' },
+    { year: '2019', event: 'First 100 Artisans', description: 'Built partnerships with castlepeople across 5 countries' },
     { year: '2021', event: 'Carbon Neutral', description: 'Achieved carbon neutrality across our entire supply chain' },
     { year: '2023', event: '10,000+ Customers', description: 'Reached our milestone of serving 10,000 happy customers' },
     { year: '2024', event: 'Global Expansion', description: 'Launched international shipping to 50+ countries' }
@@ -88,7 +88,7 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="section-title">
-              About <span className="text-black font-bold">COZ CRAFT</span>
+              About <span className="text-black font-bold">COZ CASTLE</span>
             </h1>
             <p className="section-subtitle max-w-3xl mx-auto">
               We're more than a marketplace - we're a <span className="text-black font-semibold">bridge</span> connecting skilled <span className="text-black font-semibold">artisans</span> with people who appreciate authentic, handcrafted <span className="text-black font-semibold">beauty</span> in their homes.
@@ -114,13 +114,13 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  COZ CRAFT was born from a simple observation: in our increasingly digital world, people crave authentic, tangible connections to traditional craftsmanship. Our founder, Sarah Johnson, discovered this during her travels through Southeast Asia, where she witnessed incredible artisans creating beautiful pieces that rarely reached global markets.
+                  COZ CASTLE was born from a simple observation: in our increasingly digital world, people crave authentic, tangible connections to traditional craftsmanship. Our founder, Sarah Johnson, discovered this during her travels through Southeast Asia, where she witnessed incredible artisans creating beautiful pieces that rarely reached global markets.
                 </p>
                 <p>
                   What started as a small collection of handwoven bags has grown into a curated marketplace featuring hundreds of unique products from artisans across the globe. Each piece in our collection is chosen not just for its beauty, but for the story it tells and the traditional techniques it preserves.
                 </p>
                 <p>
-                  Today, we're proud to support over 300 artisans from 15 countries, helping preserve traditional crafts while providing sustainable livelihoods for skilled craftspeople. Every purchase you make helps keep these time-honored traditions alive for future generations.
+                  Today, we're proud to support over 300 artisans from 15 countries, helping preserve traditional castles while providing sustainable livelihoods for skilled castlepeople. Every purchase you make helps keep these time-honored traditions alive for future generations.
                 </p>
               </div>
             </motion.div>
@@ -279,7 +279,7 @@ const About = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              The passionate people behind COZ CRAFT who work every day to connect artisans with design lovers worldwide.
+              The passionate people behind COZ CASTLE who work every day to connect artisans with design lovers worldwide.
             </p>
           </motion.div>
 
@@ -335,7 +335,7 @@ const About = () => {
               Join Our Mission
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Every purchase supports artisan communities and helps preserve traditional crafts. Discover unique pieces that tell a story.
+              Every purchase supports artisan communities and helps preserve traditional castles. Discover unique pieces that tell a story.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button

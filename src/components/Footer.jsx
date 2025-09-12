@@ -25,7 +25,7 @@ const Footer = () => {
       title: 'Categories',
       links: [
         { name: 'Handwoven Bags', href: '#' },
-        { name: 'Bamboo Crafts', href: '#' },
+        { name: 'Bamboo Castles', href: '#' },
         { name: 'Ceramic Bowls', href: '#' },
         { name: 'Home Decor', href: '#' },
       ]
@@ -61,19 +61,19 @@ const Footer = () => {
             transition={{ duration: 0.6 }}
           >
             <img 
-              src="/images/logo/COZ_CRAFT_BLACK.png" 
-              alt="CozCraft" 
+              src="/images/logo/COZ_CASTLE_BLACK.png" 
+              alt="CozCastle" 
               className="h-8 w-auto mb-4"
             />
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Discover authentic handcrafted products that bring warmth and uniqueness to your home. Each piece tells a story of traditional craftsmanship and modern design.
+              Discover authentic handcrafted products that bring warmth and uniqueness to your home. Each piece tells a story of traditional castlesmanship and modern design.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-600">
                 <MapPin size={16} className="mr-3 text-brand-green" />
-                <span className="text-sm">123 Craft Street, Artisan City, AC 12345</span>
+                <span className="text-sm">123 Castle Street, Artisan City, AC 12345</span>
               </div>
               <div className="flex items-center text-gray-600">
                 <Phone size={16} className="mr-3 text-brand-blue" />
@@ -81,7 +81,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-gray-600">
                 <Mail size={16} className="mr-3 text-brand-orange" />
-                <span className="text-sm">hello@cozcraft.com</span>
+                <span className="text-sm">hello@cozcastle.com</span>
               </div>
             </div>
           </motion.div>
@@ -154,9 +154,9 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              © 2024 CozCraft. Made with{' '}
+              © 2024 CozCastle. Made with{' '}
               <Heart size={14} className="inline text-brand-orange" />
-              {' '}for craft lovers.
+              {' '}for castle lovers.
             </motion.p>
 
             {/* Social Links */}

@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@cozcraft.com',
+      details: 'hello@cozcastle.com',
       subdeatils: 'We reply within 24 hours',
       color: 'text-brand-orange'
     },
@@ -41,7 +41,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: '123 Craft Street',
+      details: '123 Castle Street',
       subdeatils: 'Artisan City, AC 12345',
       color: 'text-brand-green'
     },
@@ -111,7 +111,7 @@ const Contact = () => {
               Get in <span className="text-black font-bold">Touch</span>
             </h1>
             <p className="section-subtitle max-w-2xl mx-auto">
-              Have questions about our <span className="text-black font-semibold">products</span> or need help with your order? We'd love to hear from you and help bring <span className="text-black font-semibold">authentic craftsmanship</span> to your home.
+              Have questions about our <span className="text-black font-semibold">products</span> or need help with your order? We'd love to hear from you and help bring <span className="text-black font-semibold">authentic castlesmanship</span> to your home.
             </p>
           </motion.div>
         </div>
@@ -290,8 +290,8 @@ const Contact = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
                       <MapPin className="text-brand-orange mx-auto mb-2" size={32} />
-                      <p className="text-black font-medium">COZ CRAFT Headquarters</p>
-                      <p className="text-gray-700 text-sm">123 Craft Street, Artisan City</p>
+                      <p className="text-black font-medium">COZ CASTLE Headquarters</p>
+                      <p className="text-gray-700 text-sm">123 Castle Street, Artisan City</p>
                     </div>
                   </div>
                 </div>

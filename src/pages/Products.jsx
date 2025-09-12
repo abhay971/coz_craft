@@ -11,121 +11,161 @@ const Products = () => {
   const headerRef = useScrollAnimation();
 
   const categories = [
-    { id: "all", name: "All Products", count: 48 },
-    { id: "bags", name: "Handwoven Bags", count: 12 },
-    { id: "lighting", name: "Bamboo Lighting", count: 8 },
-    { id: "kitchenware", name: "Ceramic Bowls", count: 15 },
-    { id: "storage", name: "Storage & Baskets", count: 10 },
-    { id: "decor", name: "Home Decor", count: 3 },
+    { id: "all", name: "All Categories", count: 150 },
+    { id: "furniture", name: "Furniture", count: 25 },
+    { id: "rugs", name: "Rugs", count: 18 },
+    { id: "fabrics", name: "Fabrics", count: 20 },
+    { id: "lights", name: "Lights", count: 15 },
+    { id: "tiles", name: "Tiles/Flooring", count: 12 },
+    { id: "utensils", name: "Utensils", count: 10 },
+    { id: "bedsheets", name: "Bed Sheets/Linen", count: 14 },
+    { id: "antiques", name: "Antiques", count: 8 },
+    { id: "artifacts", name: "Artifacts", count: 6 },
+    { id: "stoles", name: "Stoles", count: 9 },
+    { id: "wallcoverings", name: "Wall Coverings", count: 7 },
+    { id: "bathfittings", name: "Bath Fittings", count: 6 },
   ];
 
   const sortOptions = [
     { value: "featured", label: "Featured" },
-    { value: "price-low", label: "Price: Low to High" },
-    { value: "price-high", label: "Price: High to Low" },
-    { value: "rating", label: "Highest Rated" },
+    { value: "supplier", label: "By Supplier" },
+    { value: "location", label: "By Location" },
+    { value: "handcrafted", label: "Handcrafted First" },
     { value: "newest", label: "Newest First" },
   ];
 
   const products = [
     {
       id: 1,
-      name: "Handwoven Striped Tote Bag",
-      price: 2899,
-      originalPrice: 3899,
+      name: "Striped Tote Bag - Handcrafted",
       image: "/images/products/Handwoven_Tote_Bag.png",
-      category: "bags",
-      rating: 4.8,
-      reviews: 124,
+      category: "fabrics",
+      type: "handcrafted",
+      supplier: "Artisan Collective Ltd",
+      location: "Jaipur, India",
       isNew: true,
-      isSale: true,
       colors: ["#8B4513", "#DEB887", "#F4A460"],
     },
     {
       id: 2,
-      name: "Bamboo Table Lamp",
-      price: 5199,
+      name: "Bamboo Table Lamp - Handcrafted",
       image: "/images/products/Modern_Bamboo_Table_Lamp.png",
-      category: "lighting",
-      rating: 4.9,
-      reviews: 89,
+      category: "lights",
+      type: "handcrafted",
+      supplier: "Bamboo Castle Works",
+      location: "Assam, India",
       isNew: false,
-      isSale: false,
       colors: ["#DEB887", "#8B4513"],
     },
     {
       id: 3,
-      name: "Ceramic Bowl Set (3 pieces)",
-      price: 3099,
-      originalPrice: 4249,
+      name: "Ceramic Bowl Set - Handcrafted",
       image: "/images/products/Handmade_Ceramic_Bowls_Set.png",
-      category: "kitchenware",
-      rating: 4.7,
-      reviews: 156,
+      category: "utensils",
+      type: "handcrafted",
+      supplier: "Traditional Pottery Works",
+      location: "Khurja, India",
       isNew: false,
-      isSale: true,
       colors: ["#FFF8DC", "#F5DEB3", "#DEB887"],
     },
     {
       id: 4,
-      name: "Wicker Storage Basket",
-      price: 2129,
+      name: "Storage Basket - Handcrafted",
       image: "/images/products/Wicker_Storage_Basket.png",
-      category: "storage",
-      rating: 4.6,
-      reviews: 203,
+      category: "furniture",
+      type: "handcrafted",
+      supplier: "Wicker Castle Co",
+      location: "Chhattisgarh, India",
       isNew: true,
-      isSale: false,
       colors: ["#DEB887", "#D2B48C"],
     },
     {
       id: 5,
-      name: "Macrame Wall Hanging",
-      price: 1469,
+      name: "Wall Hanging - Handcrafted",
       image: "/images/products/Bohemian Macrame Wall Hanging.png",
-      category: "decor",
-      rating: 4.5,
-      reviews: 78,
+      category: "wallcoverings",
+      type: "handcrafted",
+      supplier: "Macrame Art Studio",
+      location: "Goa, India",
       isNew: false,
-      isSale: false,
       colors: ["#F5F5DC", "#FFFAF0"],
     },
     {
       id: 6,
-      name: "Handwoven Crossbody Bag",
-      price: 2449,
-      originalPrice: 3109,
+      name: "Crossbody Bag - Handcrafted",
       image: "/images/products/Handwoven Crossbody Bag.png",
-      category: "bags",
-      rating: 4.7,
-      reviews: 92,
+      category: "fabrics",
+      type: "handcrafted",
+      supplier: "Traditional Weavers Guild",
+      location: "Gujarat, India",
       isNew: false,
-      isSale: true,
       colors: ["#8B4513", "#A0522D", "#CD853F"],
     },
     {
       id: 7,
-      name: "Bamboo Floor Lamp",
-      price: 7199,
+      name: "Floor Lamp - Handcrafted",
       image: "/images/products/Bamboo Floor Lamp.png",
-      category: "lighting",
-      rating: 4.8,
-      reviews: 67,
+      category: "lights",
+      type: "handcrafted",
+      supplier: "Bamboo Light Co",
+      location: "Kerala, India",
       isNew: true,
-      isSale: false,
       colors: ["#DEB887"],
     },
     {
       id: 8,
-      name: "Ceramic Serving Platter",
-      price: 1799,
+      name: "Serving Platter - Handcrafted",
       image: "/images/products/Artisanal Ceramic Serving Platter.png",
-      category: "kitchenware",
-      rating: 4.6,
-      reviews: 134,
+      category: "utensils",
+      type: "handcrafted",
+      supplier: "Ceramic Arts Studio",
+      location: "Rajasthan, India",
       isNew: false,
-      isSale: false,
       colors: ["#F5DEB3", "#DEB887", "#D2B48C"],
+    },
+    {
+      id: 9,
+      name: "LED Table Lamp",
+      image: "/images/products/Smart_LED_Table_Lamp.png",
+      category: "lights",
+      type: "machine",
+      supplier: "Modern Lighting Solutions",
+      location: "Mumbai, India",
+      isNew: true,
+      colors: ["#FFFFFF", "#000000"],
+    },
+    {
+      id: 10,
+      name: "Coffee Maker",
+      image: "/images/products/Premium_Coffee_Maker.png",
+      category: "furniture",
+      type: "machine",
+      supplier: "Kitchen Appliances Inc",
+      location: "Pune, India",
+      isNew: false,
+      colors: ["#2C2C2C", "#C0C0C0"],
+    },
+    {
+      id: 11,
+      name: "Storage Box Set",
+      image: "/images/products/Minimalist_Storage_Box.png",
+      category: "furniture",
+      type: "machine",
+      supplier: "Modern Storage Co",
+      location: "Chennai, India",
+      isNew: false,
+      colors: ["#FFFFFF", "#F5F5F5", "#E0E0E0"],
+    },
+    {
+      id: 12,
+      name: "Wall Art",
+      image: "/images/products/Contemporary_Wall_Art.png",
+      category: "wallcoverings",
+      type: "machine",
+      supplier: "Art Print Solutions",
+      location: "Bangalore, India",
+      isNew: true,
+      colors: ["#000000", "#FFFFFF", "#808080"],
     },
   ];
 
@@ -147,14 +187,14 @@ const Products = () => {
             transition={{ duration: 0.8 }}
           >
             <h1 className="section-title">
-              Our <span className="text-black font-bold">Products</span>
+              Product <span className="text-black font-bold">Categories</span>
             </h1>
             <p className="section-subtitle max-w-2xl mx-auto">
-              Explore our collection of{" "}
-              <span className="text-black font-semibold">authentic</span>{" "}
-              handcrafted products, each piece carefully made by skilled{" "}
-              <span className="text-black font-semibold">artisans</span> using
-              traditional techniques.
+              Browse our comprehensive B2B product catalog featuring{" "}
+              <span className="text-black font-semibold">handcrafted</span>{" "}
+              and{" "}
+              <span className="text-black font-semibold">machine-made</span>{" "}
+              products from verified suppliers across multiple categories.
             </p>
           </motion.div>
         </div>
@@ -260,7 +300,7 @@ const Products = () => {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-orange"
+                    className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#F37E3A]"
                   >
                     {sortOptions.map((option) => (
                       <option key={option.value} value={option.value}>
@@ -275,7 +315,7 @@ const Products = () => {
                       onClick={() => setViewMode("grid")}
                       className={`p-2 ${
                         viewMode === "grid"
-                          ? "bg-brand-orange text-white"
+                          ? "bg-[#F37E3A] text-white"
                           : "text-gray-600 hover:bg-gray-50"
                       }`}
                     >
@@ -285,7 +325,7 @@ const Products = () => {
                       onClick={() => setViewMode("list")}
                       className={`p-2 ${
                         viewMode === "list"
-                          ? "bg-brand-orange text-white"
+                          ? "bg-[#F37E3A] text-white"
                           : "text-gray-600 hover:bg-gray-50"
                       }`}
                     >
@@ -333,12 +373,12 @@ const Products = () => {
                       {/* Badges */}
                       <div className="absolute top-4 left-4 flex flex-col gap-2">
                         {product.isNew && (
-                          <span className="bg-brand-green text-white px-3 py-1 rounded-full text-sm font-medium">
+                          <span className="bg-[#6EBD49] text-white px-3 py-1 rounded-full text-sm font-medium">
                             New
                           </span>
                         )}
                         {product.isSale && (
-                          <span className="bg-brand-orange text-white px-3 py-1 rounded-full text-sm font-medium">
+                          <span className="bg-[#F37E3A] text-white px-3 py-1 rounded-full text-sm font-medium">
                             Sale
                           </span>
                         )}
@@ -348,13 +388,13 @@ const Products = () => {
                       <button className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-gray-200">
                         <Heart
                           size={16}
-                          className="text-gray-700 hover:text-brand-orange"
+                          className="text-gray-700 hover:text-[#F37E3A]"
                         />
                       </button>
 
                       {/* Quick View */}
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button className="btn-primary">Quick View</button>
+                        <button className="btn-primary">View Details</button>
                       </div>
                     </div>
 
@@ -365,38 +405,21 @@ const Products = () => {
                         {product.name}
                       </h3>
 
-                      <div className="flex items-center mb-4">
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              size={14}
-                              className={
-                                i < Math.floor(product.rating)
-                                  ? "text-black fill-current"
-                                  : "text-gray-300"
-                              }
-                            />
-                          ))}
-                        </div>
-                        <span className="text-sm text-gray-600 ml-2 font-medium">
-                          ({product.reviews} reviews)
-                        </span>
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600 font-medium">
+                          Supplier: {product.supplier}
+                        </p>
+                        <p className="text-sm text-gray-500">
+                          📍 {product.location}
+                        </p>
                       </div>
 
-                      {/* Craftsmanship Details */}
+                      {/* Product Details */}
                       <div className="mb-4">
                         <p className="text-sm text-gray-700 leading-relaxed">
-                          {product.category === "bags" &&
-                            "Handwoven with traditional techniques, each piece showcases unique patterns and exceptional durability."}
-                          {product.category === "lighting" &&
-                            "Crafted from sustainable bamboo using time-honored methods, bringing natural warmth to your space."}
-                          {product.category === "kitchenware" &&
-                            "Hand-thrown ceramic pieces, glazed with care to create functional art for your kitchen."}
-                          {product.category === "storage" &&
-                            "Expertly woven storage solutions that combine traditional basketry with modern functionality."}
-                          {product.category === "decor" &&
-                            "Artistically crafted home decor that celebrates traditional craftsmanship and contemporary design."}
+                          {product.type === "handcrafted" 
+                            ? "Handcrafted with traditional techniques and authentic materials by skilled artisans."
+                            : "Manufactured with precision and quality control for consistent results and durability."}
                         </p>
                       </div>
 
@@ -420,7 +443,7 @@ const Products = () => {
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
-                          View Details
+                          Contact Supplier
                         </motion.button>
                       </div>
                     </div>
