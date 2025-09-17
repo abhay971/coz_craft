@@ -1,50 +1,50 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Facebook, 
-  Instagram, 
-  Twitter, 
-  Mail, 
-  Phone, 
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Facebook,
+  Instagram,
+  Twitter,
+  Mail,
+  Phone,
   MapPin,
-  Heart 
-} from 'lucide-react';
+  Heart,
+} from "lucide-react";
 
 const Footer = () => {
   const footerSections = [
     {
-      title: 'Quick Links',
+      title: "Quick Links",
       links: [
-        { name: 'Home', href: '#home' },
-        { name: 'Products', href: '#products' },
-        { name: 'About Us', href: '#about' },
-        { name: 'Contact', href: '#contact' },
-      ]
+        { name: "Home", href: "#home" },
+        { name: "Products", href: "#products" },
+        { name: "About Us", href: "#about" },
+        { name: "Contact", href: "#contact" },
+      ],
     },
     {
-      title: 'Categories',
+      title: "Categories",
       links: [
-        { name: 'Handwoven Bags', href: '#' },
-        { name: 'Bamboo Castles', href: '#' },
-        { name: 'Ceramic Bowls', href: '#' },
-        { name: 'Home Decor', href: '#' },
-      ]
+        { name: "Handwoven Bags", href: "#" },
+        { name: "Bamboo Castles", href: "#" },
+        { name: "Ceramic Bowls", href: "#" },
+        { name: "Home Decor", href: "#" },
+      ],
     },
     {
-      title: 'Customer Care',
+      title: "Customer Care",
       links: [
-        { name: 'Shipping Info', href: '#' },
-        { name: 'Returns', href: '#' },
-        { name: 'Size Guide', href: '#' },
-        { name: 'Care Instructions', href: '#' },
-      ]
-    }
+        { name: "Shipping Info", href: "#" },
+        { name: "Returns", href: "#" },
+        { name: "Size Guide", href: "#" },
+        { name: "Care Instructions", href: "#" },
+      ],
+    },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: '#', color: 'hover:text-brand-blue' },
-    { icon: Instagram, href: '#', color: 'hover:text-brand-orange' },
-    { icon: Twitter, href: '#', color: 'hover:text-brand-blue' },
+    { icon: Facebook, href: "#", color: "hover:text-brand-blue" },
+    { icon: Instagram, href: "#", color: "hover:text-brand-orange" },
+    { icon: Twitter, href: "#", color: "hover:text-brand-blue" },
   ];
 
   return (
@@ -60,20 +60,24 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img 
-              src="/images/logo/COZ_CASTLE_BLACK.png" 
-              alt="CozCastle" 
+            <img
+              src="/images/logo/COZ_CASTLE_BLACK.png"
+              alt="CozCastle"
               className="h-8 w-auto mb-4"
             />
             <p className="text-gray-600 mb-6 leading-relaxed">
-              Discover authentic handcrafted products that bring warmth and uniqueness to your home. Each piece tells a story of traditional castlesmanship and modern design.
+              Discover authentic handcrafted products that bring warmth and
+              uniqueness to your home. Each piece tells a story of traditional
+              castlesmanship and modern design.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-600">
                 <MapPin size={16} className="mr-3 text-brand-green" />
-                <span className="text-sm">123 Castle Street, Artisan City, AC 12345</span>
+                <span className="text-sm">
+                  123 Castle Street, Artisan City, AC 12345
+                </span>
               </div>
               <div className="flex items-center text-gray-600">
                 <Phone size={16} className="mr-3 text-brand-blue" />
@@ -115,7 +119,7 @@ const Footer = () => {
         </div>
 
         {/* Newsletter Section */}
-        <motion.div
+        {/* <motion.div
           className="mt-12 pt-8 border-t border-gray-200"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +144,7 @@ const Footer = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Bottom Footer */}
@@ -154,9 +158,9 @@ const Footer = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              © 2024 CozCastle. Made with{' '}
-              <Heart size={14} className="inline text-brand-orange" />
-              {' '}for castle lovers.
+              © 2024 CozCastle. Made with{" "}
+              <Heart size={14} className="inline text-brand-orange" /> for
+              castle lovers.
             </motion.p>
 
             {/* Social Links */}

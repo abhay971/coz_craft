@@ -19,7 +19,7 @@ const Home = () => {
       category: "Fabrics and Stoles",
       supplier: "Artisan Collective Ltd",
       location: "Jaipur, India",
-      type: "handcrafted"
+      type: "handcrafted",
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const Home = () => {
       category: "Furniture",
       supplier: "Modern Home Solutions",
       location: "Mumbai, India",
-      type: "machine"
+      type: "machine",
     },
     {
       id: 3,
@@ -37,7 +37,7 @@ const Home = () => {
       category: "Utensils",
       supplier: "Traditional Pottery Works",
       location: "Khurja, India",
-      type: "handcrafted"
+      type: "handcrafted",
     },
     {
       id: 4,
@@ -46,7 +46,7 @@ const Home = () => {
       category: "Lights",
       supplier: "Tech Lighting Co",
       location: "Delhi, India",
-      type: "machine"
+      type: "machine",
     },
   ];
 
@@ -87,7 +87,7 @@ const Home = () => {
       <section
         id="home"
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white"
-        style={{ overflowX: 'hidden' }}
+        style={{ overflowX: "hidden" }}
       >
         <motion.div
           className="absolute inset-0 bg-[url('/api/placeholder/1920/1080')] bg-cover bg-center opacity-10"
@@ -120,9 +120,10 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4, duration: 0.8 }}
               >
-                Connect businesses worldwide through our comprehensive B2B trading platform. 
-                Discover quality handcrafted and machine-made products from trusted suppliers 
-                and expand your business network globally.
+                Connect businesses worldwide through our comprehensive B2B
+                trading platform. Discover quality handcrafted and machine-made
+                products from trusted suppliers and expand your business network
+                globally.
               </motion.p>
 
               <motion.div
@@ -136,20 +137,20 @@ const Home = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Start Trading
+                  Start Sourcing
                   <ArrowRight
                     className="ml-2 group-hover:translate-x-1 transition-transform duration-300"
                     size={18}
                   />
                 </motion.button>
 
-                <motion.button
+                {/* <motion.button
                   className="border-2 border-black text-black  hover:text-white px-6 lg:px-8 py-3 lg:py-4 rounded-lg font-medium transition-all duration-300 text-sm lg:text-base"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Join Network
-                </motion.button>
+                </motion.button> */}
               </motion.div>
             </motion.div>
 
@@ -204,15 +205,18 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-6 xl:px-12 bg-white" style={{ overflowX: 'hidden' }}>
+      <section
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-6 xl:px-12 bg-white"
+        style={{ overflowX: "hidden" }}
+      >
         <div className="max-w-7xl mx-auto">
           <motion.div
             ref={featuresRef}
             className="scroll-animate text-center mb-16"
           >
             <h2 className="section-title text-center">
-              Why Choose <span className="text-black font-bold">COZ CASTLE</span>
-              ?
+              Why Choose{" "}
+              <span className="text-black font-bold">COZ CASTLE</span>?
             </h2>
             <p className="section-subtitle text-center max-w-2xl mx-auto">
               We're passionate about bringing you authentic, high-quality
@@ -273,9 +277,13 @@ const Home = () => {
             </h2>
             <p className="text-lg lg:text-xl text-gray-600 text-center max-w-2xl lg:max-w-3xl mx-auto">
               Connect with{" "}
-              <span className="text-black font-semibold">verified suppliers</span> offering{" "}
+              <span className="text-black font-semibold">
+                verified suppliers
+              </span>{" "}
+              offering{" "}
               <span className="text-black font-semibold">handcrafted</span> and{" "}
-              <span className="text-black font-semibold">machine-made</span> products for B2B trade opportunities worldwide.
+              <span className="text-black font-semibold">machine-made</span>{" "}
+              products for B2B trade opportunities worldwide.
             </p>
           </div>
 
@@ -296,10 +304,14 @@ const Home = () => {
                     alt={product.name}
                     className="w-full h-56 sm:h-64 lg:h-72 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className={`absolute top-3 lg:top-4 left-3 lg:left-4 text-white px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm font-bold shadow-lg ${
-                    product.type === 'handcrafted' ? 'bg-[#F37E3A]' : 'bg-[#288EC2]'
-                  }`}>
-                    {product.type === 'handcrafted' ? 'Handcrafted' : 'Modern'}
+                  <div
+                    className={`absolute top-3 lg:top-4 left-3 lg:left-4 text-white px-2 lg:px-3 py-1 rounded-full text-xs lg:text-sm font-bold shadow-lg ${
+                      product.type === "handcrafted"
+                        ? "bg-[#F37E3A]"
+                        : "bg-[#288EC2]"
+                    }`}
+                  >
+                    {product.type === "handcrafted" ? "Handcrafted" : "Modern"}
                   </div>
                   <div className="absolute top-3 lg:top-4 right-3 lg:right-4 bg-white/90 backdrop-blur-sm rounded-full p-1.5 lg:p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Star className="text-black" size={14} />

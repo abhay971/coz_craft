@@ -1,22 +1,22 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Clock, 
-  MessageCircle, 
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  MessageCircle,
   Send,
-  CheckCircle 
-} from 'lucide-react';
-import { useScrollAnimation } from '../hooks/useScrollAnimation';
+  CheckCircle,
+} from "lucide-react";
+import { useScrollAnimation } from "../hooks/useScrollAnimation";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -26,57 +26,61 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email Us',
-      details: 'hello@cozcastle.com',
-      subdeatils: 'We reply within 24 hours',
-      color: 'text-brand-orange'
+      title: "Email Us",
+      details: "hello@cozcastle.com",
+      subdeatils: "We reply within 24 hours",
+      color: "text-brand-orange",
     },
     {
       icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      subdeatils: 'Mon-Fri, 9AM-6PM EST',
-      color: 'text-brand-blue'
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      subdeatils: "Mon-Fri, 9AM-6PM EST",
+      color: "text-brand-blue",
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Castle Street',
-      subdeatils: 'Artisan City, AC 12345',
-      color: 'text-brand-green'
+      title: "Visit Us",
+      details: "123 Castle Street",
+      subdeatils: "Artisan City, AC 12345",
+      color: "text-brand-green",
     },
     {
       icon: Clock,
-      title: 'Working Hours',
-      details: 'Mon - Fri: 9AM - 6PM',
-      subdeatils: 'Sat - Sun: 10AM - 4PM',
-      color: 'text-brand-orange'
-    }
+      title: "Working Hours",
+      details: "Mon - Fri: 9AM - 6PM",
+      subdeatils: "Sat - Sun: 10AM - 4PM",
+      color: "text-brand-orange",
+    },
   ];
 
   const faqs = [
     {
-      question: 'How long does shipping take?',
-      answer: 'Standard shipping takes 5-7 business days. Express shipping is available for 2-3 business days.'
+      question: "How long does shipping take?",
+      answer:
+        "Standard shipping takes 5-7 business days. Express shipping is available for 2-3 business days.",
     },
     {
-      question: 'Do you offer international shipping?',
-      answer: 'Yes, we ship to over 50 countries worldwide. Shipping times and costs vary by location.'
+      question: "Do you offer international shipping?",
+      answer:
+        "Yes, we ship to over 50 countries worldwide. Shipping times and costs vary by location.",
     },
     {
-      question: 'What is your return policy?',
-      answer: 'We offer a 30-day return policy for unused items in their original condition. Custom items are non-returnable.'
+      question: "What is your return policy?",
+      answer:
+        "We offer a 30-day return policy for unused items in their original condition. Custom items are non-returnable.",
     },
     {
-      question: 'Are your products ethically made?',
-      answer: 'Absolutely! We work directly with artisans, ensuring fair wages and sustainable practices in all our partnerships.'
-    }
+      question: "Are your products ethically made?",
+      answer:
+        "Absolutely! We work directly with artisans, ensuring fair wages and sustainable practices in all our partnerships.",
+    },
   ];
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -87,10 +91,10 @@ const Contact = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
     }, 3000);
   };
@@ -98,7 +102,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <section className="section-padding bg-gray-50">
+      {/* <section className="section-padding bg-gray-50">
         <div className="container-custom">
           <motion.div
             ref={headerRef}
@@ -115,12 +119,12 @@ const Contact = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Contact Info */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -133,7 +137,9 @@ const Contact = () => {
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   whileHover={{ y: -5 }}
                 >
-                  <div className={`inline-flex p-4 rounded-full bg-gray-50 ${info.color} mb-4`}>
+                  <div
+                    className={`inline-flex p-4 rounded-full bg-gray-50 ${info.color} mb-4`}
+                  >
                     <Icon size={24} />
                   </div>
                   <h3 className="font-semibold text-brand-black mb-2">
@@ -142,26 +148,24 @@ const Contact = () => {
                   <p className="text-gray-800 font-medium mb-1">
                     {info.details}
                   </p>
-                  <p className="text-gray-600 text-sm">
-                    {info.subdeatils}
-                  </p>
+                  <p className="text-gray-600 text-sm">{info.subdeatils}</p>
                 </motion.div>
               );
             })}
-          </div>
+          </div> */}
 
           {/* Main Contact Section */}
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
               ref={formRef}
-              className="scroll-animate"
+              className="scroll-animate h-full"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="card p-8">
+              <div className="card p-8 h-full flex flex-col">
                 <div className="flex items-center mb-6">
                   <MessageCircle className="text-brand-orange mr-3" size={24} />
                   <h2 className="text-2xl font-semibold text-brand-black">
@@ -172,9 +176,7 @@ const Contact = () => {
                 {!isSubmitted ? (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
-                      <motion.div
-                        whileFocus={{ scale: 1.02 }}
-                      >
+                      <motion.div whileFocus={{ scale: 1.02 }}>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Your Name *
                         </label>
@@ -189,9 +191,7 @@ const Contact = () => {
                         />
                       </motion.div>
 
-                      <motion.div
-                        whileFocus={{ scale: 1.02 }}
-                      >
+                      <motion.div whileFocus={{ scale: 1.02 }}>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
                           Email Address *
                         </label>
@@ -207,9 +207,7 @@ const Contact = () => {
                       </motion.div>
                     </div>
 
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                    >
+                    <motion.div whileFocus={{ scale: 1.02 }}>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Subject *
                       </label>
@@ -229,9 +227,7 @@ const Contact = () => {
                       </select>
                     </motion.div>
 
-                    <motion.div
-                      whileFocus={{ scale: 1.02 }}
-                    >
+                    <motion.div whileFocus={{ scale: 1.02 }}>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Message *
                       </label>
@@ -270,7 +266,8 @@ const Contact = () => {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600">
-                      Thank you for contacting us. We'll get back to you within 24 hours.
+                      Thank you for contacting us. We'll get back to you within
+                      24 hours.
                     </p>
                   </motion.div>
                 )}
@@ -279,26 +276,34 @@ const Contact = () => {
 
             {/* Map & Additional Info */}
             <motion.div
+              className="h-full flex flex-col"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {/* Map Placeholder */}
-              <div className="card mb-8 overflow-hidden">
+              <div className="card mb-8 overflow-hidden flex-shrink-0">
                 <div className="h-64 bg-gray-100 relative border">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-center">
-                      <MapPin className="text-brand-orange mx-auto mb-2" size={32} />
-                      <p className="text-black font-medium">COZ CASTLE Headquarters</p>
-                      <p className="text-gray-700 text-sm">123 Castle Street, Artisan City</p>
+                      <MapPin
+                        className="text-brand-orange mx-auto mb-2"
+                        size={32}
+                      />
+                      <p className="text-black font-medium">
+                        COZ CASTLE Headquarters
+                      </p>
+                      <p className="text-gray-700 text-sm">
+                        123 Castle Street, Artisan City
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* FAQ Section */}
-              <div className="card p-8">
+              <div className="card p-8 flex-1">
                 <h3 className="text-xl font-semibold text-brand-black mb-6">
                   Frequently Asked Questions
                 </h3>
@@ -328,7 +333,7 @@ const Contact = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-brand-black text-white">
+      {/* <section className="section-padding bg-brand-black text-white">
         <div className="container-custom text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -340,7 +345,8 @@ const Contact = () => {
               Need Immediate Help?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              For urgent inquiries or order issues, don't hesitate to call us directly. Our customer service team is ready to help.
+              For urgent inquiries or order issues, don't hesitate to call us
+              directly. Our customer service team is ready to help.
             </p>
             <motion.a
               href="tel:+15551234567"
@@ -353,7 +359,7 @@ const Contact = () => {
             </motion.a>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -12,18 +12,21 @@ const Products = () => {
 
   const categories = [
     { id: "all", name: "All Categories", count: 150 },
-    { id: "furniture", name: "Furniture", count: 25 },
     { id: "rugs", name: "Rugs", count: 18 },
     { id: "fabrics", name: "Fabrics", count: 20 },
-    { id: "lights", name: "Lights", count: 15 },
-    { id: "tiles", name: "Tiles/Flooring", count: 12 },
-    { id: "utensils", name: "Utensils", count: 10 },
-    { id: "bedsheets", name: "Bed Sheets/Linen", count: 14 },
-    { id: "antiques", name: "Antiques", count: 8 },
-    { id: "artifacts", name: "Artifacts", count: 6 },
-    { id: "stoles", name: "Stoles", count: 9 },
-    { id: "wallcoverings", name: "Wall Coverings", count: 7 },
+    { id: "tiles", name: "Flooring", count: 12 },
+    { id: "lighting", name: "Lighting", count: 15 },
+    { id: "planters", name: "Planters", count: 8 },
+    { id: "furniture", name: "Furniture", count: 25 },
+    { id: "bedlinen", name: "Bed Linen", count: 14 },
+    { id: "bathware", name: "Bathware", count: 14 },
+    { id: "kitchenware", name: "Kitchenware", count: 10 },
     { id: "bathfittings", name: "Bath Fittings", count: 6 },
+    { id: "wallcoverings", name: "Wall Coverings", count: 7 },
+    { id: "antiques&artifacts", name: "Antiques & Artifacts", count: 8 },
+    // { id: "glassware", name: "Glassware", count: 25 },
+    // { id: "artifacts", name: "Artifacts", count: 6 },
+    // { id: "stoles", name: "Stoles", count: 9 },
   ];
 
   const sortOptions = [
@@ -191,8 +194,7 @@ const Products = () => {
             </h1>
             <p className="section-subtitle max-w-2xl mx-auto">
               Browse our comprehensive B2B product catalog featuring{" "}
-              <span className="text-black font-semibold">handcrafted</span>{" "}
-              and{" "}
+              <span className="text-black font-semibold">handcrafted</span> and{" "}
               <span className="text-black font-semibold">machine-made</span>{" "}
               products from verified suppliers across multiple categories.
             </p>
@@ -417,7 +419,7 @@ const Products = () => {
                       {/* Product Details */}
                       <div className="mb-4">
                         <p className="text-sm text-gray-700 leading-relaxed">
-                          {product.type === "handcrafted" 
+                          {product.type === "handcrafted"
                             ? "Handcrafted with traditional techniques and authentic materials by skilled artisans."
                             : "Manufactured with precision and quality control for consistent results and durability."}
                         </p>
