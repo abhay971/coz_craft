@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { Footer7 } from "./components/ui/footer-7";
 import Home from "./pages/Home";
-import Products from "./pages/Products";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Categories from "./pages/Categories";
+import InteractiveSelector from "./components/ui/interactive-selector";
+import CustomisedProducts from "./components/ui/CustomisedProducts";
+import ContactUs from "./components/ui/ContactUs";
 import React from "react";
+
 function App() {
   return (
     <div className="App">
@@ -16,21 +18,21 @@ function App() {
         <section id="home">
           <Home />
         </section>
-
-        <section id="products">
-          <Products />
+        <section id="categories">
+          <Categories />
         </section>
-
-        <section id="about">
-          <About />
+        <section id="handcrafted">
+          <InteractiveSelector />
         </section>
-
+        <section id="customised">
+          <CustomisedProducts />
+        </section>
         <section id="contact">
-          <Contact />
+          <ContactUs />
         </section>
       </main>
 
-      <Footer />
+      <Footer7 />
     </div>
   );
 }
