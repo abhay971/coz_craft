@@ -78,7 +78,8 @@ export default function HandcraftedShowcase() {
             </h2>
 
             <p className="handcrafted-text text-lg text-slate-600 max-w-2xl mx-auto">
-              Timeless artisan creations, meticulously crafted for discerning collectors
+              Timeless artisan creations, meticulously crafted for discerning
+              collectors
             </p>
           </motion.div>
 

@@ -51,7 +51,7 @@ export const Footer7 = ({
     title: "COZ CRAFT",
   },
   sections = defaultSections,
-  description = "CLUB of Home Decore",
+  description = "CLUB of Home Decor",
   socialLinks = defaultSocialLinks,
   copyright = "© 2025 COZ CRAFT. All rights reserved.",
   legalLinks = defaultLegalLinks,

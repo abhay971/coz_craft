@@ -89,9 +89,9 @@ export default function CustomisedProducts() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#F37E3A]"></div>
-              <Sparkles className="w-5 h-5" style={{ color: "#F37E3A" }} />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#F37E3A]"></div>
+              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#000]"></div>
+              <Sparkles className="w-5 h-5" style={{ color: "#000" }} />
+              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#000]"></div>
             </div>
 
             <h2 className="customised-title text-4xl md:text-5xl font-bold text-black mb-3">

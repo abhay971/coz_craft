@@ -124,16 +124,16 @@ const Categories = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F37E3A]/10 border border-[#F37E3A]/30 mb-4"
+              className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#288EC2]/10 border border-[#288EC2]/30 mb-4"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <Sparkles className="w-4 h-4" style={{ color: "#F37E3A" }} />
+              <Sparkles className="w-4 h-4" style={{ color: "#288EC2" }} />
               <span
-                className="text-sm font-semibold tracking-wide"
-                style={{ color: "#F37E3A" }}
+                className="text-md font-semibold tracking-wide"
+                style={{ color: "#288EC2" }}
               >
                 PRODUCT CATEGORIES
               </span>

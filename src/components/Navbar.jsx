@@ -69,7 +69,7 @@ const Navbar = () => {
                 isPastHero ? "text-black" : "text-white"
               }`}
             >
-              CLUB of Home Decore
+              CLUB of Home Decor
             </p>
           </motion.div>
 

@@ -29,16 +29,16 @@ export default function AboutUsSection() {
     },
     {
       icon: Shield,
-      title: "Verified Excellence",
+      title: "Validated Producers",
       description:
         "Every supplier rigorously vetted for quality, authenticity, and ethical practices.",
       color: "#6EBD49",
     },
     {
       icon: Globe,
-      title: "Global B2B Network",
+      title: "Global Network",
       description:
-        "Connecting businesses across 25+ countries with premium suppliers.",
+        "Connecting businesses across 50+ countries with premium suppliers.",
       color: "#F37E3A",
     },
     {
@@ -50,7 +50,7 @@ export default function AboutUsSection() {
     },
     {
       icon: TrendingUp,
-      title: "Trade Excellence",
+      title: "Seamless Delivery",
       description: "Complete B2B support from discovery to delivery.",
       color: "#6EBD49",
     },
@@ -100,7 +100,7 @@ export default function AboutUsSection() {
             transition={{ duration: 0.8 }}
           >
             <motion.div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F37E3A]/10 border border-[#F37E3A]/30 mb-4"
+              className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-[#F37E3A]/10 border border-[#F37E3A]/30 mb-4"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -108,7 +108,7 @@ export default function AboutUsSection() {
             >
               <Sparkles className="w-4 h-4" style={{ color: "#F37E3A" }} />
               <span
-                className="text-sm font-semibold tracking-wide"
+                className="text-md font-semibold tracking-wide"
                 style={{ color: "#F37E3A" }}
               >
                 ABOUT OUR PLATFORM

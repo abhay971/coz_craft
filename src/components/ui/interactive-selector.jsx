@@ -88,9 +88,9 @@ const InteractiveSelector = () => {
       {/* Header Section */}
       <div className="w-full max-w-7xl px-6 mt-4 mb-6 text-center relative z-10">
         <div className="inline-flex items-center gap-2 mb-4">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#F37E3A]"></div>
-          <Crown className="w-5 h-5" style={{ color: "#F37E3A" }} />
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#F37E3A]"></div>
+          <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#6EBD49]"></div>
+          <Crown className="w-5 h-5" style={{ color: "#6EBD49" }} />
+          <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#6EBD49]"></div>
         </div>
         <h1
           className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300"
