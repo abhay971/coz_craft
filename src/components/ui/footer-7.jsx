@@ -14,8 +14,8 @@ const defaultSections = [
     title: "Quick Links",
     links: [
       { name: "Home", href: "#home" },
-      { name: "About Us", href: "#about" },
       { name: "Products", href: "#categories" },
+      { name: "About Us", href: "#about" },
       { name: "Contact Us", href: "#contact" },
     ],
   },

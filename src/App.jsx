@@ -7,6 +7,7 @@ import Categories from "./pages/Categories";
 import InteractiveSelector from "./components/ui/interactive-selector";
 import CustomisedProducts from "./components/ui/CustomisedProducts";
 import ContactUs from "./components/ui/ContactUs";
+import AboutUsSection from "./components/ui/AboutUsSection";
 import React from "react";
 
 function App() {
@@ -17,6 +18,9 @@ function App() {
       <main>
         <section id="home">
           <Home />
+        </section>
+        <section id="about">
+          <AboutUsSection />
         </section>
         <section id="categories">
           <Categories />

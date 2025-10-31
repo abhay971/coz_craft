@@ -3,7 +3,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Star, Users, Award, Truck } from "lucide-react";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { LampContainer } from "../components/ui/lamp";
-import AboutUsSection from "../components/ui/AboutUsSection";
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -166,9 +165,6 @@ const Home = () => {
           </motion.div>
         </LampContainer>
       </section>
-
-      {/* About Us Section */}
-      <AboutUsSection />
     </div>
   );
 };

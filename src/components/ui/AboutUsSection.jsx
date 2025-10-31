@@ -125,11 +125,11 @@ export default function AboutUsSection() {
             </p>
 
             {/* Decorative Divider */}
-            <div className="flex items-center justify-center gap-2 mt-4">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#F37E3A]"></div>
+            {/* <div className="flex items-center justify-center gap-2 mt-4">
+              <div className="h-0.5 w-16 bg-gradient-to-r from-transparent to-[#F37E3A]"></div>
               <Crown className="w-5 h-5" style={{ color: "#F37E3A" }} />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#F37E3A]"></div>
-            </div>
+              <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-[#F37E3A]"></div>
+            </div> */}
           </motion.div>
 
           {/* Features Grid */}
