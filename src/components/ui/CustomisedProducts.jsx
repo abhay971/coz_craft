@@ -174,7 +174,7 @@ export default function CustomisedProducts() {
           </div>
 
           {/* Bottom CTA Section */}
-          <motion.div
+          {/* <motion.div
             className="text-center bg-gradient-to-r from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-md"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -201,7 +201,7 @@ export default function CustomisedProducts() {
             >
               Consult Our Team
             </motion.button>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Bottom Border */}

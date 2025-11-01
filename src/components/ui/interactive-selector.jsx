@@ -100,7 +100,7 @@ const InteractiveSelector = () => {
         >
           Handcrafted <span style={{ color: "#F37E3A" }}>Excellence</span>
         </h1>
-        <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+        <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
           Each piece in our handcrafted collection tells a unique story of
           tradition and artistry. Our master artisans pour their expertise into
           every creation, ensuring unparalleled quality and authenticity. From
