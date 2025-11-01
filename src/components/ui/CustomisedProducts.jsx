@@ -16,13 +16,13 @@ export default function CustomisedProducts() {
   const services = [
     {
       icon: <Palette size={28} />,
-      title: "Design & Development",
+      title: "Product Design",
       description:
-        "Custom product design from concept to final creation by expert artisans",
+        "Custom product design from concept to creation by  artisans",
     },
     {
       icon: <Lightbulb size={28} />,
-      title: "Strategic Services",
+      title: "Strategic Sourcing",
       description:
         "Comprehensive planning and consultation to align with your vision",
     },
@@ -34,18 +34,17 @@ export default function CustomisedProducts() {
     },
     {
       icon: <Truck size={28} />,
-      title: "Logistic Management",
+      title: "Logistics Management",
       description:
         "End-to-end logistics handling from production to safe delivery",
     },
   ];
 
   const features = [
-    "Unlimited design revisions",
-    "Material & color customization",
     "Dimension specifications",
-    "Personalized engravings",
+    "Unlimited design revisions",
     "Exclusive patterns & textures",
+    "Material & color customization",
     "End-to-end project management",
   ];
 
@@ -89,20 +88,22 @@ export default function CustomisedProducts() {
             transition={{ duration: 0.6 }}
           >
             <div className="inline-flex items-center gap-2 mb-3">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#000]"></div>
+              <div className="h-0.5 w-16 bg-gradient-to-r from-transparent to-[#000]"></div>
               <Sparkles className="w-5 h-5" style={{ color: "#000" }} />
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#000]"></div>
+              <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-[#000]"></div>
             </div>
 
             <h2 className="customised-title text-4xl md:text-5xl font-bold text-black mb-3">
               Bespoke <span style={{ color: "#F37E3A" }}>Creations</span>
             </h2>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
-              Our dedicated team of design experts and master artisans
-              collaborate with you to transform your unique vision into reality.
-              From concept to creation, we ensure every detail reflects your
-              personal style and meets your exact specifications.
+            <p className="text-xl text-foreground/80 font-normal max-w-7xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+              Our dedicated team of design experts and master artisans will
+              transform your unique vision into reality. <br />
+              <span>
+                From concept to creation, we ensure every detail reflects your
+                personal style and meets your expectation.
+              </span>
             </p>
           </motion.div>
 
@@ -181,11 +182,11 @@ export default function CustomisedProducts() {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <h3 className="customised-title text-2xl font-bold text-black mb-3">
-              Ready to Create Something Extraordinary?
+              Ready to Create?
             </h3>
             <p className="text-md text-gray-700 mb-5 max-w-4xl mx-auto leading-relaxed">
-              Let's collaborate to bring your vision to life. Our team is ready
-              to guide you through every step of the creative journey.
+              Our team will guide you through every step of your creative
+              journey.
             </p>
             <motion.button
               className="px-8 py-3 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all duration-300 text-base border-2 border-transparent hover:border-[#F37E3A]/30"

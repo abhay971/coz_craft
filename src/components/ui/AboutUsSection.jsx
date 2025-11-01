@@ -28,17 +28,17 @@ export default function AboutUsSection() {
       color: "#288EC2",
     },
     {
-      icon: Shield,
-      title: "Validated Producers",
-      description:
-        "Every supplier rigorously vetted for quality, authenticity, and ethical practices.",
-      color: "#6EBD49",
-    },
-    {
       icon: Globe,
       title: "Global Network",
       description:
         "Connecting businesses across 50+ countries with premium suppliers.",
+      color: "#6EBD49",
+    },
+    {
+      icon: Shield,
+      title: "Validated Producers",
+      description:
+        "Every supplier rigorously vetted for quality, authenticity, and ethical practices.",
       color: "#F37E3A",
     },
     {
@@ -119,9 +119,9 @@ export default function AboutUsSection() {
               Where Artistry Meets Luxury
             </h1>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-8xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+            <p className="text-xl text-foreground/80 font-normal max-w-8xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
               A distinguished marketplace connecting elite businesses with
-              master artisans and premium manufacturers.
+              premium manufacturers and master artisans.
             </p>
 
             {/* Decorative Divider */}

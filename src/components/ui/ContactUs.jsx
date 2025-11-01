@@ -41,25 +41,26 @@ export default function ContactUs() {
     {
       icon: <Mail size={24} />,
       title: "Email Us",
-      detail: "contact@cozcraft.com",
+      detail: "contact@cozcastle.com",
       color: "#F37E3A",
     },
     {
       icon: <Phone size={24} />,
       title: "Call Us",
-      detail: "+1 (555) 123-4567",
+      detail: "+91 92741 66689",
       color: "#288EC2",
     },
     {
       icon: <MessageCircle size={24} />,
       title: "WhatsApp",
-      detail: "+1 (555) 987-6543",
+      detail: "+91 92741 66689",
       color: "#6EBD49",
     },
     {
       icon: <MapPin size={24} />,
       title: "Visit Us",
-      detail: "123 Artisan Street, NY",
+      detail: "5 Laxmi Society,",
+      detail2: "O.P. Road, Vadodara-390007, Gujarat, India.",
       color: "#000000",
     },
   ];
@@ -123,10 +124,9 @@ export default function ContactUs() {
               Get In <span style={{ color: "#F37E3A" }}>Touch</span>
             </h2>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
-              Let's discuss how we can bring your vision to life. Our team of
-              experts is ready to assist you with customised solutions tailored
-              to your needs.
+            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+              Our team of experts will assist you with customised solutions
+              tailored to your needs.
             </p>
           </motion.div>
 
@@ -303,6 +303,9 @@ export default function ContactUs() {
                       <p className="text-md text-gray-700 leading-relaxed">
                         {info.detail}
                       </p>
+                      <p className="text-md text-gray-700 leading-relaxed">
+                        {info.detail2}
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -337,8 +340,7 @@ export default function ContactUs() {
                     </span>
                   </div>
                   <p className="text-md text-gray-700 mt-3 leading-relaxed">
-                    Our team is ready to assist you 24/7. Reach out anytime
-                    through any of our contact channels.
+                    Reach out anytime through any of our contact channels.
                   </p>
                 </div>
               </motion.div>

@@ -22,10 +22,10 @@ const defaultSections = [
   {
     title: "Our Services",
     links: [
-      { name: "Design & Development", href: "#customised" },
-      { name: "Strategic Services", href: "#customised" },
+      { name: "Product Design", href: "#customised" },
+      { name: "Strategic Sourcing", href: "#customised" },
       { name: "Quality Assurance", href: "#customised" },
-      { name: "Logistic Management", href: "#customised" },
+      { name: "Logistics Management", href: "#customised" },
     ],
   },
 ];
@@ -141,7 +141,7 @@ export const Footer7 = ({
                   />
                 </a>
                 <p className="text-md text-white font-semibold tracking-wide">
-                  CLUB of Home Decore
+                  CLUB of Home Decor
                 </p>
               </div>
 

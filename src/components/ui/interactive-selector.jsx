@@ -8,6 +8,8 @@ import {
   ShoppingBasket,
   Waves,
   Layers,
+  Armchair,
+  Scissors,
 } from "lucide-react";
 
 const InteractiveSelector = () => {
@@ -16,16 +18,10 @@ const InteractiveSelector = () => {
 
   const options = [
     {
-      title: "Artisan Ceramics",
-      description: "Hand-thrown pottery masterpieces",
-      image: "/images/hand_crafted/ceramicbowls.png",
-      icon: <CircleDot size={26} className="text-white" />,
-    },
-    {
-      title: "Artisanal Jute Rugs",
-      description: "Traditional loom craftsmanship",
-      image: "/images/hand_crafted/handmaderugs.png",
-      icon: <Layers size={26} className="text-white" />,
+      title: "Macramé Art",
+      description: "Bohemian wall masterpieces",
+      image: "/images/hand_crafted/macramewall.png",
+      icon: <Sparkles size={26} className="text-white" />,
     },
     {
       title: "Bamboo Creations",
@@ -34,16 +30,22 @@ const InteractiveSelector = () => {
       icon: <Lightbulb size={26} className="text-white" />,
     },
     {
-      title: "Macramé Art",
-      description: "Bohemian wall masterpieces",
-      image: "/images/hand_crafted/macramewall.png",
-      icon: <Sparkles size={26} className="text-white" />,
+      title: "Artisan Fabrics",
+      description: "Handwoven textiles and luxury stoles",
+      image: "/images/hand_crafted/artisan_fabrics.jpg",
+      icon: <Scissors size={26} className="text-white" />,
     },
     {
-      title: "Wicker Baskets",
-      description: "Handcrafted storage elegance",
-      image: "/images/hand_crafted/storagebasket.png",
-      icon: <ShoppingBasket size={26} className="text-white" />,
+      title: "Artisanal Jute Rugs",
+      description: "Traditional loom craftsmanship",
+      image: "/images/hand_crafted/handmaderugs.png",
+      icon: <Layers size={26} className="text-white" />,
+    },
+    {
+      title: "Handcrafted Furniture",
+      description: "Timeless pieces carved with precision",
+      image: "/images/hand_crafted/handcrafted_furniture.jpg",
+      icon: <Armchair size={26} className="text-white" />,
     },
   ];
 
@@ -100,11 +102,10 @@ const InteractiveSelector = () => {
         </h1>
         <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
           Each piece in our handcrafted collection tells a unique story of
-          tradition, skill, and artistry. Our master artisans pour their
-          expertise into every creation, ensuring unparalleled quality and
-          authenticity. From hand-thrown ceramics to intricately woven textiles,
-          discover pieces that transform spaces into expressions of timeless
-          elegance.
+          tradition and artistry. Our master artisans pour their expertise into
+          every creation, ensuring unparalleled quality and authenticity. From
+          hand-thrown ceramics to intricately woven textiles, discover pieces
+          that transform spaces into expressions of timeless elegance.
         </p>
       </div>
 

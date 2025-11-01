@@ -142,9 +142,9 @@ const Categories = () => {
             <h2 className="category-title text-4xl md:text-5xl font-bold mb-4 text-black">
               Curated Collections
             </h2>
-            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-justify from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
-              Explore our distinguished catalog of premium home decor across 12
-              meticulously curated categories.
+            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10 justify-center text-center">
+              Explore our distinguished catalog across meticulously curated
+              categories.
             </p>
 
             {/* Decorative Divider */}
