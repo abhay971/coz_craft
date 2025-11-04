@@ -71,7 +71,7 @@ const InteractiveSelector = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans text-slate-900 py-12">
+    <div className="relative flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans text-slate-900 py-8 sm:py-12">
       {/* Subtle Background Accents */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -88,19 +88,19 @@ const InteractiveSelector = () => {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>
 
       {/* Header Section */}
-      <div className="w-full max-w-7xl px-6 mt-4 mb-6 text-center relative z-10">
+      <div className="w-full max-w-7xl px-4 sm:px-6 mt-4 mb-4 sm:mb-6 text-center relative z-10">
         <div className="inline-flex items-center gap-2 mb-4">
           <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#6EBD49]"></div>
           <Crown className="w-5 h-5" style={{ color: "#6EBD49" }} />
           <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#6EBD49]"></div>
         </div>
         <h1
-          className="text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black mb-4 tracking-tight drop-shadow-lg animate-fadeInTop delay-300"
           style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Handcrafted <span style={{ color: "#F37E3A" }}>Excellence</span>
         </h1>
-        <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+        <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-normal max-w-full mx-auto mb-6 sm:mb-8 mt-6 sm:mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-4 sm:py-6 px-4 sm:px-8 border-y border-primary/10">
           Each piece in our handcrafted collection tells a unique story of
           tradition and artistry. Our master artisans pour their expertise into
           every creation, ensuring unparalleled quality and authenticity. From
@@ -109,10 +109,65 @@ const InteractiveSelector = () => {
         </p>
       </div>
 
-      <div className="h-6"></div>
+      <div className="h-4 md:h-6"></div>
 
-      {/* Options Container */}
-      <div className="options flex w-full max-w-[1200px] min-w-[280px] md:min-w-[600px] h-[450px] mx-0 items-stretch overflow-hidden relative px-6">
+      {/* Mobile View - Vertical Cards (< md) */}
+      <div className="block md:hidden w-full max-w-lg mx-auto px-4 space-y-4">
+        {options.map((option, index) => (
+          <div
+            key={index}
+            className="relative rounded-2xl overflow-hidden shadow-lg"
+            style={{
+              opacity: animatedOptions.includes(index) ? 1 : 0,
+              transform: animatedOptions.includes(index)
+                ? "translateY(0)"
+                : "translateY(20px)",
+              transition: "all 0.5s ease-out",
+            }}
+          >
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{
+                backgroundImage: `url('${option.image}')`,
+              }}
+            ></div>
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent"></div>
+
+            {/* Content */}
+            <div className="relative p-5 min-h-[180px] flex flex-col justify-end">
+              {/* Icon */}
+              <div
+                className="inline-flex items-center justify-center w-14 h-14 rounded-full mb-3 border-2 border-white shadow-lg"
+                style={{ backgroundColor: "rgba(243, 126, 58, 0.95)" }}
+              >
+                {option.icon}
+              </div>
+
+              {/* Title */}
+              <h3
+                className="text-2xl font-bold text-white mb-2"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
+                {option.title}
+              </h3>
+
+              {/* Description */}
+              <p
+                className="text-base text-white/90"
+                style={{ fontFamily: "'Cormorant Garamond', serif" }}
+              >
+                {option.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop View - Horizontal Expandable (>= md) */}
+      <div className="hidden md:flex w-full max-w-[1200px] h-[400px] lg:h-[450px] mx-0 items-stretch overflow-hidden relative px-6">
         {options.map((option, index) => (
           <div
             key={index}
@@ -129,8 +184,8 @@ const InteractiveSelector = () => {
               transform: animatedOptions.includes(index)
                 ? "translateX(0)"
                 : "translateX(-60px)",
-              minWidth: "70px",
-              minHeight: "100px",
+              minWidth: "80px",
+              minHeight: "100%",
               margin: 0,
               borderRadius: "12px",
               borderWidth: "3px",
@@ -138,10 +193,6 @@ const InteractiveSelector = () => {
               borderColor: activeIndex === index ? "#F37E3A" : "#e2e8f0",
               cursor: "pointer",
               backgroundColor: "#f8fafc",
-              // boxShadow:
-              //   activeIndex === index
-              //     ? "0 25px 70px rgba(243, 126, 58, 0.35), 0 10px 30px rgba(243, 126, 58, 0.2), inset 0 0 0 1px rgba(243, 126, 58, 0.1)"
-              //     : "0 12px 35px rgba(0,0,0,0.12), 0 4px 15px rgba(0,0,0,0.08)",
               flex: activeIndex === index ? "7 1 0%" : "1 1 0%",
               zIndex: activeIndex === index ? 10 : 1,
               display: "flex",
@@ -174,10 +225,6 @@ const InteractiveSelector = () => {
                 style={{
                   backgroundColor: "rgba(243, 126, 58, 0.95)",
                   borderColor: "#FFFFFF",
-                  // boxShadow:
-                  //   activeIndex === index
-                  //     ? "0 8px 20px rgba(243, 126, 58, 0.5), 0 4px 10px rgba(0,0,0,0.25), inset 0 1px 2px rgba(255,255,255,0.3)"
-                  //     : "0 4px 12px rgba(243, 126, 58, 0.4), 0 2px 6px rgba(0,0,0,0.2)",
                 }}
               >
                 {option.icon}
@@ -192,8 +239,6 @@ const InteractiveSelector = () => {
                         ? "translateX(0)"
                         : "translateX(25px)",
                     fontFamily: "'Playfair Display', serif",
-                    // textShadow:
-                    //   "0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.4)",
                   }}
                 >
                   {option.title}
@@ -220,9 +265,9 @@ const InteractiveSelector = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="text-center mt-8 mb-4 relative z-10">
+      <div className="text-center mt-6 sm:mt-8 mb-4 relative z-10">
         <button
-          className="px-10 py-4 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 text-base md:text-lg border-2 border-transparent hover:border-[#F37E3A]/30"
+          className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 text-sm sm:text-base md:text-lg border-2 border-transparent hover:border-[#F37E3A]/30"
           style={{
             backgroundColor: "#F37E3A",
             color: "#FFFFFF",
@@ -274,6 +319,18 @@ const InteractiveSelector = () => {
 
         .delay-600 {
           animation-delay: 0.6s;
+        }
+
+        /* Mobile card hover effect */
+        .hover\:scale-102:hover {
+          transform: scale(1.02);
+        }
+
+        /* Smooth scrolling for mobile cards */
+        @media (max-width: 768px) {
+          .space-y-4 > * {
+            scroll-snap-align: start;
+          }
         }
       `}</style>
     </div>

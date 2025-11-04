@@ -89,7 +89,7 @@ export default function ContactUs() {
         }
       `}</style>
 
-      <section className="relative py-12 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
+      <section className="relative py-8 sm:py-12 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
         {/* Elegant Background Accents */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -105,10 +105,10 @@ export default function ContactUs() {
         {/* Top Border */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <motion.div
-            className="text-center mb-8"
+            className="text-center mb-6 sm:mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -120,18 +120,18 @@ export default function ContactUs() {
               <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#F37E3A]"></div>
             </div>
 
-            <h2 className="contact-title text-4xl md:text-5xl font-bold text-black mb-3">
+            <h2 className="contact-title text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3">
               Get In <span style={{ color: "#F37E3A" }}>Touch</span>
             </h2>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-normal max-w-full mx-auto mb-6 sm:mb-8 mt-6 sm:mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-4 sm:py-6 px-4 sm:px-8 border-y border-primary/10">
               Our team of experts will assist you with customised solutions
               tailored to your needs.
             </p>
           </motion.div>
 
           {/* Main Content - Contact Form + Info */}
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
             {/* Contact Form - Takes 2 columns */}
             <motion.div
               className="lg:col-span-2 flex"
@@ -140,19 +140,19 @@ export default function ContactUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="bg-white rounded-xl border-2 border-slate-200 shadow-lg p-6 flex flex-col w-full">
-                <div className="flex items-center gap-2 mb-5">
-                  <Crown className="w-6 h-6" style={{ color: "#F37E3A" }} />
-                  <h3 className="contact-title text-2xl font-bold text-black">
+              <div className="bg-white rounded-xl border-2 border-slate-200 shadow-lg p-4 sm:p-6 flex flex-col w-full">
+                <div className="flex items-center gap-2 mb-4 sm:mb-5">
+                  <Crown className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: "#F37E3A" }} />
+                  <h3 className="contact-title text-xl sm:text-2xl font-bold text-black">
                     Send Us a Message
                   </h3>
                 </div>
 
                 <form
                   onSubmit={handleSubmit}
-                  className="space-y-4 flex-1 flex flex-col"
+                  className="space-y-3 sm:space-y-4 flex-1 flex flex-col"
                 >
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label
                         htmlFor="name"
@@ -167,7 +167,7 @@ export default function ContactUs() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
                         placeholder="John Doe"
                       />
                     </div>
@@ -186,13 +186,13 @@ export default function ContactUs() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
                         placeholder="john@example.com"
                       />
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label
                         htmlFor="company"
@@ -206,7 +206,7 @@ export default function ContactUs() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
                         placeholder="Your Company"
                       />
                     </div>
@@ -224,7 +224,7 @@ export default function ContactUs() {
                         value={formData.category}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300 bg-white"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300 bg-white"
                       >
                         <option value="">Select a category</option>
                         {categories.map((cat, idx) => (
@@ -249,14 +249,14 @@ export default function ContactUs() {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      className="w-full flex-1 px-4 py-3 rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300 resize-none"
+                      className="w-full flex-1 min-h-[100px] px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300 resize-none"
                       placeholder="Tell us about your requirements..."
                     />
                   </div>
 
                   <motion.button
                     type="submit"
-                    className="w-full px-6 py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-base"
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
                     style={{
                       backgroundColor: "#F37E3A",
                       color: "#FFFFFF",
@@ -274,7 +274,7 @@ export default function ContactUs() {
 
             {/* Contact Info Cards - Takes 1 column */}
             <motion.div
-              className="space-y-4 flex flex-col"
+              className="space-y-3 sm:space-y-4 flex flex-col"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -283,27 +283,27 @@ export default function ContactUs() {
               {contactInfo.map((info, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 p-5 group hover:border-[#F37E3A]"
+                  className="bg-white rounded-xl border-2 border-slate-200 shadow-md hover:shadow-lg transition-all duration-300 p-4 sm:p-5 group hover:border-[#F37E3A]"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3 sm:gap-4">
                     <div
-                      className="min-w-[56px] h-[56px] flex items-center justify-center rounded-lg shadow-md group-hover:scale-110 transition-transform duration-300"
+                      className="min-w-[48px] h-[48px] sm:min-w-[56px] sm:h-[56px] flex items-center justify-center rounded-lg shadow-md group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                       style={{ backgroundColor: info.color }}
                     >
                       <div className="text-white">{info.icon}</div>
                     </div>
-                    <div>
-                      <h4 className="contact-title text-lg font-bold text-black mb-1">
+                    <div className="flex-1">
+                      <h4 className="contact-title text-base sm:text-lg font-bold text-black mb-1">
                         {info.title}
                       </h4>
-                      <p className="text-md text-gray-700 leading-relaxed">
+                      <p className="text-sm sm:text-md text-gray-700 leading-relaxed break-words">
                         {info.detail}
                       </p>
-                      <p className="text-md text-gray-700 leading-relaxed">
+                      <p className="text-sm sm:text-md text-gray-700 leading-relaxed break-words">
                         {info.detail2}
                       </p>
                     </div>
@@ -313,19 +313,19 @@ export default function ContactUs() {
 
               {/* Availability Card */}
               <motion.div
-                className="bg-gradient-to-br from-orange-50 to-white rounded-xl border-2 border-[#F37E3A] shadow-xl p-5"
+                className="bg-gradient-to-br from-orange-50 to-white rounded-xl border-2 border-[#F37E3A] shadow-xl p-4 sm:p-5"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.5, duration: 0.5 }}
               >
-                <h4 className="contact-title text-lg font-bold text-black mb-2 flex items-center gap-2">
-                  <Crown size={20} style={{ color: "#F37E3A" }} />
+                <h4 className="contact-title text-base sm:text-lg font-bold text-black mb-2 flex items-center gap-2">
+                  <Crown size={18} className="sm:w-5 sm:h-5" style={{ color: "#F37E3A" }} />
                   Availability
                 </h4>
-                <div className="text-center py-3">
+                <div className="text-center py-2 sm:py-3">
                   <div
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-2"
+                    className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full mb-2"
                     style={{
                       backgroundColor: "rgba(110, 189, 73, 0.15)",
                       border: "2px solid #6EBD49",
@@ -335,11 +335,11 @@ export default function ContactUs() {
                       className="w-3 h-3 rounded-full animate-pulse"
                       style={{ backgroundColor: "#6EBD49" }}
                     ></div>
-                    <span className="font-bold" style={{ color: "#6EBD49" }}>
+                    <span className="font-bold text-sm sm:text-base" style={{ color: "#6EBD49" }}>
                       We're Always Available
                     </span>
                   </div>
-                  <p className="text-md text-gray-700 mt-3 leading-relaxed">
+                  <p className="text-sm sm:text-md text-gray-700 mt-2 sm:mt-3 leading-relaxed">
                     Reach out anytime through any of our contact channels.
                   </p>
                 </div>

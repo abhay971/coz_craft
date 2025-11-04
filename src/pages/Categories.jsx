@@ -98,7 +98,7 @@ const Categories = () => {
         }
       `}</style>
 
-      <div className="relative bg-gradient-to-b from-white to-slate-50 py-12 pb-6 overflow-hidden">
+      <div className="relative bg-gradient-to-b from-white to-slate-50 py-8 sm:py-12 pb-4 sm:pb-6 overflow-hidden">
         {/* Elegant Background Accents */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -114,7 +114,7 @@ const Categories = () => {
         {/* Decorative Top Border */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>
 
-        <div className="relative mx-auto w-full max-w-7xl px-6 lg:px-8">
+        <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <motion.div
             className="text-center mb-8"
@@ -139,10 +139,10 @@ const Categories = () => {
               </span>
             </motion.div>
 
-            <h2 className="category-title text-4xl md:text-5xl font-bold mb-4 text-black">
+            <h2 className="category-title text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
               Curated Collections
             </h2>
-            <p className="text-xl text-foreground/80 font-normal max-w-6xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10 justify-center text-center">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-normal max-w-full mx-auto mb-6 sm:mb-8 mt-6 sm:mt-8 leading-loose tracking-wider bg-gradient-to-r from-transparent via-primary/5 to-transparent py-4 sm:py-6 px-4 sm:px-8 border-y border-primary/10 justify-center text-center">
               Explore our distinguished catalog across meticulously curated
               categories.
             </p>
@@ -188,7 +188,7 @@ const CategoryCard = ({ heading, count, description, imgSrc, index }) => {
   return (
     <motion.div
       whileHover="hover"
-      className="group relative h-64 w-full cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl"
+      className="group relative h-56 sm:h-60 md:h-64 w-full cursor-pointer overflow-hidden rounded-lg shadow-lg hover:shadow-xl"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -212,7 +212,7 @@ const CategoryCard = ({ heading, count, description, imgSrc, index }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-20 flex h-full flex-col justify-between p-5 text-white">
+      <div className="relative z-20 flex h-full flex-col justify-between p-4 sm:p-5 text-white">
         {/* Top Section with Arrow */}
         <div className="flex justify-end items-start">
           <ArrowRight
@@ -223,7 +223,7 @@ const CategoryCard = ({ heading, count, description, imgSrc, index }) => {
 
         {/* Bottom Section with Title and Description */}
         <div>
-          <h4 className="category-title mb-2 drop-shadow-lg text-2xl font-bold">
+          <h4 className="category-title mb-2 drop-shadow-lg text-xl sm:text-2xl font-bold">
             {heading.split("").map((letter, idx) => (
               <AnimatedLetter letter={letter} key={idx} />
             ))}
@@ -252,7 +252,7 @@ const letterVariants = {
 
 const AnimatedLetter = ({ letter }) => {
   return (
-    <div className="inline-block h-[32px] overflow-hidden">
+    <div className="inline-block h-[28px] sm:h-[32px] overflow-hidden">
       <motion.span
         className="flex min-w-[5px] flex-col"
         style={{ y: "0%" }}

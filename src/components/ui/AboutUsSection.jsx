@@ -70,7 +70,7 @@ export default function AboutUsSection() {
                 }
             `}</style>
 
-      <section className="relative py-12 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
+      <section className="relative py-8 sm:py-12 bg-gradient-to-b from-slate-50 to-white overflow-hidden">
         {/* Elegant Background Patterns */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -90,7 +90,7 @@ export default function AboutUsSection() {
         {/* Decorative Border */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <motion.div
             className="text-center mb-8"
@@ -115,11 +115,11 @@ export default function AboutUsSection() {
               </span>
             </motion.div>
 
-            <h1 className="luxury-title text-4xl md:text-5xl font-bold mb-4 text-black">
+            <h1 className="luxury-title text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-black">
               Where Artistry Meets Luxury
             </h1>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-8xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-normal max-w-full mx-auto mb-6 sm:mb-8 mt-6 sm:mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-4 sm:py-6 px-4 sm:px-8 border-y border-primary/10">
               A distinguished marketplace connecting elite businesses with
               premium manufacturers and master artisans.
             </p>
@@ -133,7 +133,7 @@ export default function AboutUsSection() {
           </motion.div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {features.map((feature, index) => (
               <motion.div
                 key={index}

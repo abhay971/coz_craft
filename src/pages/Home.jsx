@@ -98,7 +98,7 @@ const Home = () => {
             className="text-center"
           >
             <motion.h1
-              className="-mt-20 py-4 text-center text-4xl font-bold tracking-tight md:text-7xl font-serif"
+              className="-mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 py-4 text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight font-serif"
               style={{
                 color: "#FFFFFF",
                 textShadow:

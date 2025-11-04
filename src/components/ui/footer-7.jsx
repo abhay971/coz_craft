@@ -120,8 +120,8 @@ export const Footer7 = ({
         </div>
 
         {/* Main Content */}
-        <div className="relative container mx-auto px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
             {/* Brand Section */}
             <motion.div
               className="flex flex-col gap-4"
@@ -137,10 +137,10 @@ export const Footer7 = ({
                     src={logo.src}
                     alt={logo.alt}
                     title={logo.title}
-                    className="h-12 w-auto"
+                    className="h-10 sm:h-12 w-auto"
                   />
                 </a>
-                <p className="text-md text-white font-semibold tracking-wide">
+                <p className="text-sm sm:text-md text-white font-semibold tracking-wide">
                   CLUB of Home Decor
                 </p>
               </div>
@@ -160,11 +160,11 @@ export const Footer7 = ({
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: (sectionIdx + 1) * 0.1 }}
               >
-                <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-2">
-                  <div className="w-1 h-6 bg-brand-orange rounded-full"></div>
+                <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-white flex items-center gap-2">
+                  <div className="w-1 h-5 sm:h-6 bg-brand-orange rounded-full"></div>
                   {section.title}
                 </h3>
-                <ul className="space-y-3">
+                <ul className="space-y-2 sm:space-y-3">
                   {section.links.map((link, linkIdx) => (
                     <motion.li
                       key={linkIdx}
@@ -173,7 +173,7 @@ export const Footer7 = ({
                     >
                       <a
                         href={link.href}
-                        className="text-base flex items-center gap-2 group text-white"
+                        className="text-sm sm:text-base flex items-center gap-2 group text-white"
                       >
                         <span className="w-0 h-[2px] bg-brand-orange group-hover:w-4 transition-all duration-300"></span>
                         {link.name}
@@ -191,11 +191,11 @@ export const Footer7 = ({
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <h3 className="text-xl font-bold mb-6 text-white flex items-center gap-2">
-                <div className="w-1 h-6 bg-brand-orange rounded-full"></div>
+              <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 text-white flex items-center gap-2">
+                <div className="w-1 h-5 sm:h-6 bg-brand-orange rounded-full"></div>
                 Connect With Us
               </h3>
-              <ul className="flex items-center gap-3 flex-wrap">
+              <ul className="flex items-center gap-2 sm:gap-3 flex-wrap">
                 {socialLinks.map((social, idx) => (
                   <motion.li
                     key={idx}
@@ -205,7 +205,7 @@ export const Footer7 = ({
                     <a
                       href={social.href}
                       aria-label={social.label}
-                      className="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 hover:bg-brand-orange border-2 border-white/20 hover:border-brand-orange transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-brand-orange/50"
+                      className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-brand-orange border-2 border-white/20 hover:border-brand-orange transition-all duration-300 backdrop-blur-sm shadow-lg hover:shadow-brand-orange/50"
                     >
                       <span className="text-white">{social.icon}</span>
                     </a>
@@ -217,16 +217,16 @@ export const Footer7 = ({
 
           {/* Bottom Section */}
           <motion.div
-            className="mt-16 pt-8 border-t border-white/10"
+            className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-sm">
-              <p className="text-white flex items-center gap-2">{copyright}</p>
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-xs sm:text-sm">
+              <p className="text-white flex items-center gap-2 text-center">{copyright}</p>
 
-              <ul className="flex items-center gap-6">
+              <ul className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
                 {legalLinks.map((link, idx) => (
                   <motion.li
                     key={idx}

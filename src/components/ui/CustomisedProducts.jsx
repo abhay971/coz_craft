@@ -62,7 +62,7 @@ export default function CustomisedProducts() {
         }
       `}</style>
 
-      <section className="relative py-12 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
+      <section className="relative py-8 sm:py-12 bg-gradient-to-b from-white via-slate-50 to-white overflow-hidden">
         {/* Elegant Background Accents */}
         <div className="absolute inset-0 opacity-5">
           <div
@@ -78,7 +78,7 @@ export default function CustomisedProducts() {
         {/* Top Border */}
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Compact Header */}
           <motion.div
             className="text-center mb-8"
@@ -93,11 +93,11 @@ export default function CustomisedProducts() {
               <div className="h-0.5 w-16 bg-gradient-to-l from-transparent to-[#000]"></div>
             </div>
 
-            <h2 className="customised-title text-4xl md:text-5xl font-bold text-black mb-3">
+            <h2 className="customised-title text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-3">
               Bespoke <span style={{ color: "#F37E3A" }}>Creations</span>
             </h2>
 
-            <p className="text-xl text-foreground/80 font-normal max-w-7xl mx-auto mb-8 mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-6 px-8 border-y border-primary/10">
+            <p className="text-base sm:text-lg md:text-xl text-foreground/80 font-normal max-w-full mx-auto mb-6 sm:mb-8 mt-6 sm:mt-8 leading-loose tracking-wider bg-gradient-to-r text-center from-transparent via-primary/5 to-transparent py-4 sm:py-6 px-4 sm:px-8 border-y border-primary/10">
               Our dedicated team of design experts and master artisans will
               transform your unique vision into reality. <br />
               <span>
@@ -108,10 +108,10 @@ export default function CustomisedProducts() {
           </motion.div>
 
           {/* Main Content - Single Row Layout */}
-          <div className="grid lg:grid-cols-3 gap-8 items-stretch mb-8">
+          <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 items-stretch mb-6 sm:mb-8">
             {/* Left - Services Grid */}
             <motion.div
-              className="lg:col-span-2 grid sm:grid-cols-2 gap-4"
+              className="lg:col-span-2 grid sm:grid-cols-2 gap-3 sm:gap-4"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -120,21 +120,21 @@ export default function CustomisedProducts() {
               {services.map((service, index) => (
                 <motion.div
                   key={index}
-                  className="relative p-5 rounded-xl border-2 border-slate-200 bg-white hover:border-[#F37E3A] hover:shadow-lg transition-all duration-300 group"
+                  className="relative p-4 sm:p-5 rounded-xl border-2 border-slate-200 bg-white hover:border-[#F37E3A] hover:shadow-lg transition-all duration-300 group"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="min-w-[56px] h-[56px] flex items-center justify-center rounded-lg bg-slate-100 group-hover:bg-[#F37E3A] text-slate-600 group-hover:text-white transition-all duration-300 shadow-md">
+                  <div className="flex items-start gap-2 sm:gap-3">
+                    <div className="min-w-[48px] h-[48px] sm:min-w-[56px] sm:h-[56px] flex items-center justify-center rounded-lg bg-slate-100 group-hover:bg-[#F37E3A] text-slate-600 group-hover:text-white transition-all duration-300 shadow-md flex-shrink-0">
                       {service.icon}
                     </div>
                     <div>
-                      <h3 className="customised-title text-xl font-bold text-black mb-1">
+                      <h3 className="customised-title text-lg sm:text-xl font-bold text-black mb-1">
                         {service.title}
                       </h3>
-                      <p className="text-md text-gray-700 leading-relaxed">
+                      <p className="text-sm sm:text-md text-gray-700 leading-relaxed">
                         {service.description}
                       </p>
                     </div>
@@ -145,26 +145,26 @@ export default function CustomisedProducts() {
 
             {/* Right - Features List Card */}
             <motion.div
-              className="relative p-5 rounded-xl border-2 border-[#F37E3A] bg-gradient-to-br from-orange-50 to-white shadow-xl flex flex-col"
+              className="relative p-4 sm:p-5 rounded-xl border-2 border-[#F37E3A] bg-gradient-to-br from-orange-50 to-white shadow-xl flex flex-col"
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-center gap-2 mb-4">
-                <Crown className="w-6 h-6" style={{ color: "#F37E3A" }} />
-                <h3 className="customised-title text-xl font-bold text-black">
+              <div className="flex items-center gap-2 mb-3 sm:mb-4">
+                <Crown className="w-5 h-5 sm:w-6 sm:h-6" style={{ color: "#F37E3A" }} />
+                <h3 className="customised-title text-lg sm:text-xl font-bold text-black">
                   What We Offer
                 </h3>
               </div>
-              <ul className="space-y-3 flex-1">
+              <ul className="space-y-2 sm:space-y-3 flex-1">
                 {features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <CheckCircle2
-                      size={18}
-                      className="text-[#F37E3A] flex-shrink-0 mt-1"
+                      size={16}
+                      className="text-[#F37E3A] flex-shrink-0 mt-1 sm:w-[18px] sm:h-[18px]"
                     />
-                    <span className="text-md text-gray-700 leading-relaxed">
+                    <span className="text-sm sm:text-md text-gray-700 leading-relaxed">
                       {feature}
                     </span>
                   </li>

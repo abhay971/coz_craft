@@ -62,10 +62,10 @@ const Navbar = () => {
                   : "/images/logo/COZ_CASTLE.png"
               }
               alt="COZ CASTLE"
-              className="h-12 w-auto transition-all duration-300"
+              className="h-10 sm:h-12 w-auto transition-all duration-300"
             />
             <p
-              className={`text-md font-semibold tracking-wide transition-all duration-300 ${
+              className={`text-xs sm:text-sm md:text-md font-semibold tracking-wide transition-all duration-300 ${
                 isPastHero ? "text-black" : "text-white"
               }`}
             >
