@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 const Categories = () => {
   const categories = [
@@ -32,10 +32,10 @@ const Categories = () => {
       imgSrc: "/images/categories/Lighting.png",
     },
     {
-      heading: "Planters",
+      heading: "Doors & Windows",
       count: 8,
       description: "Artisanal planters, ceramic pots, and garden accessories.",
-      imgSrc: "/images/categories/Planters.png",
+      imgSrc: "/images/categories/Doors_&_Windows.png",
     },
     {
       heading: "Furniture",
@@ -212,15 +212,7 @@ const CategoryCard = ({ heading, count, description, imgSrc, index }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
       {/* Content */}
-      <div className="relative z-20 flex h-full flex-col justify-between p-4 sm:p-5 text-white">
-        {/* Top Section with Arrow */}
-        <div className="flex justify-end items-start">
-          <ArrowRight
-            className="text-white text-2xl transition-all duration-500 group-hover:-rotate-45 group-hover:scale-110"
-            style={{ color: "white" }}
-          />
-        </div>
-
+      <div className="relative z-20 flex h-full flex-col justify-end p-4 sm:p-5 text-white">
         {/* Bottom Section with Title and Description */}
         <div>
           <h4 className="category-title mb-2 drop-shadow-lg text-xl sm:text-2xl font-bold">

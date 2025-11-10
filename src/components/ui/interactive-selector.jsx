@@ -36,7 +36,7 @@ const InteractiveSelector = () => {
       icon: <Scissors size={26} className="text-white" />,
     },
     {
-      title: "Artisanal Jute Rugs",
+      title: "Area Rugs",
       description: "Traditional loom craftsmanship",
       image: "/images/hand_crafted/handmaderugs.png",
       icon: <Layers size={26} className="text-white" />,
@@ -265,7 +265,7 @@ const InteractiveSelector = () => {
       </div>
 
       {/* CTA Button */}
-      <div className="text-center mt-6 sm:mt-8 mb-4 relative z-10">
+      {/* <div className="text-center mt-6 sm:mt-8 mb-4 relative z-10">
         <button
           className="px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-xl font-bold shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 text-sm sm:text-base md:text-lg border-2 border-transparent hover:border-[#F37E3A]/30"
           style={{
@@ -278,7 +278,7 @@ const InteractiveSelector = () => {
         >
           Explore Collection
         </button>
-      </div>
+      </div> */}
 
       {/* Bottom Border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#F37E3A] to-transparent"></div>

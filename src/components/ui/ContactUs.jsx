@@ -16,10 +16,14 @@ export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     category: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
 
   const categories = [
     "Rugs",
@@ -69,10 +73,48 @@ export default function ContactUs() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      // API endpoint - uses environment variable
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/contact`;
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          category: "",
+          message: "",
+        });
+
+        // Clear success message after 5 seconds
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -195,6 +237,24 @@ export default function ContactUs() {
                   <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                     <div>
                       <label
+                        htmlFor="phone"
+                        className="block text-sm font-semibold text-slate-700 mb-2"
+                      >
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base rounded-lg border-2 border-slate-200 focus:border-[#F37E3A] focus:outline-none transition-colors duration-300"
+                        placeholder="+91 12345 67890"
+                      />
+                    </div>
+
+                    <div>
+                      <label
                         htmlFor="company"
                         className="block text-sm font-semibold text-slate-700 mb-2"
                       >
@@ -211,7 +271,7 @@ export default function ContactUs() {
                       />
                     </div>
 
-                    <div>
+                    <div className="sm:col-span-2">
                       <label
                         htmlFor="category"
                         className="block text-sm font-semibold text-slate-700 mb-2"
@@ -256,18 +316,40 @@ export default function ContactUs() {
 
                   <motion.button
                     type="submit"
-                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base"
+                    disabled={isSubmitting}
+                    className="w-full px-4 sm:px-6 py-3 sm:py-4 rounded-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base disabled:opacity-60 disabled:cursor-not-allowed"
                     style={{
                       backgroundColor: "#F37E3A",
                       color: "#FFFFFF",
                       fontFamily: "'Playfair Display', serif",
                     }}
-                    whileHover={{ scale: 1.02, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={!isSubmitting ? { scale: 1.02, y: -2 } : {}}
+                    whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                   >
                     <Send size={20} />
-                    Send Message
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </motion.button>
+
+                  {/* Status Messages */}
+                  {submitStatus === 'success' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 rounded-lg border-2 border-green-500 bg-green-50 text-green-800 text-sm sm:text-base"
+                    >
+                      <strong>Success!</strong> Thank you for contacting us. We'll get back to you soon.
+                    </motion.div>
+                  )}
+
+                  {submitStatus === 'error' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="p-4 rounded-lg border-2 border-red-500 bg-red-50 text-red-800 text-sm sm:text-base"
+                    >
+                      <strong>Error!</strong> Failed to submit form. Please try again or contact us directly.
+                    </motion.div>
+                  )}
                 </form>
               </div>
             </motion.div>

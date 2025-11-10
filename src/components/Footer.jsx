@@ -320,7 +320,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                © 2025 COZ CRAFT. Made with{" "}
+                © 2025 COZ CASTLE. Made with{" "}
                 <Heart
                   size={16}
                   className="inline animate-pulse"

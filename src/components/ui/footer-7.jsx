@@ -53,7 +53,7 @@ export const Footer7 = ({
   sections = defaultSections,
   description = "CLUB of Home Decor",
   socialLinks = defaultSocialLinks,
-  copyright = "© 2025 COZ CRAFT. All rights reserved.",
+  copyright = "© 2025 COZ CASTLE. All rights reserved.",
   legalLinks = defaultLegalLinks,
 }) => {
   return (
@@ -62,8 +62,18 @@ export const Footer7 = ({
         .footer-premium-bg {
           background:
             linear-gradient(135deg, rgba(0, 0, 0, 0.70) 0%, rgba(20, 20, 30, 0.75) 50%, rgba(0, 0, 0, 0.70) 100%),
-            url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop') center/cover;
-          background-attachment: fixed;
+            url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-attachment: scroll;
+        }
+
+        /* Desktop: Use fixed background for parallax effect */
+        @media (min-width: 768px) {
+          .footer-premium-bg {
+            background-attachment: fixed;
+          }
         }
 
         .footer-premium-overlay {
@@ -120,8 +130,8 @@ export const Footer7 = ({
         </div>
 
         {/* Main Content */}
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10 lg:py-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
             {/* Brand Section */}
             <motion.div
               className="flex flex-col gap-4"
@@ -217,28 +227,58 @@ export const Footer7 = ({
 
           {/* Bottom Section */}
           <motion.div
-            className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10"
+            className="mt-8 sm:mt-12 md:mt-16 pt-4 sm:pt-6 md:pt-8 border-t border-white/10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6 text-xs sm:text-sm">
-              <p className="text-white flex items-center gap-2 text-center">{copyright}</p>
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-end gap-4 text-xs sm:text-sm">
+              {/* Copyright - Show at bottom on mobile, left on desktop */}
+              <p className="text-white flex items-center gap-2 text-center order-3 md:order-1 w-full md:w-auto">
+                {copyright}
+              </p>
 
-              <ul className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
-                {legalLinks.map((link, idx) => (
-                  <motion.li
-                    key={idx}
-                    className="text-white hover:text-brand-orange transition-colors duration-300"
-                    whileHover={{ y: -2 }}
+              {/* Legal Links and Company Logo */}
+              <div className="flex flex-col items-center md:items-end gap-4 order-1 md:order-2 w-full md:w-auto">
+                {/* Legal Links */}
+                <ul className="flex items-center gap-3 sm:gap-4 md:gap-6 flex-wrap justify-center">
+                  {legalLinks.map((link, idx) => (
+                    <motion.li
+                      key={idx}
+                      className="text-white hover:text-brand-orange transition-colors duration-300"
+                      whileHover={{ y: -2 }}
+                    >
+                      <a className="text-white" href={link.href}>
+                        {link.name}
+                      </a>
+                    </motion.li>
+                  ))}
+                </ul>
+
+                {/* A COZ Club Logo Company */}
+                <div className="flex items-center space-x-1 sm:space-x-2">
+                  <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+                    A
+                  </span>
+                  <motion.a
+                    href="https://www.cozclub.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.1 }}
+                    className="flex items-center"
                   >
-                    <a className="text-white" href={link.href}>
-                      {link.name}
-                    </a>
-                  </motion.li>
-                ))}
-              </ul>
+                    <img
+                      src="/images/coz_club.png"
+                      alt="COZ Club Logo"
+                      className="h-5 sm:h-6 md:h-7 lg:h-8 w-auto"
+                    />
+                  </motion.a>
+                  <span className="text-white text-base sm:text-lg md:text-xl lg:text-2xl font-bold">
+                    Company
+                  </span>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

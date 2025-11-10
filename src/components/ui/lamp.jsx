@@ -13,9 +13,12 @@ export const LampContainer = ({ children, className }) => {
       {/* Background Image Overlay */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-80"
+          className="absolute inset-0 opacity-80"
           style={{
             backgroundImage: `url('/images/hero/hero2.png')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
           }}
         />
         {/* <div className="absolute inset-0 bg-gradient-to-b from-slate-950/30 via-slate-950/20 to-slate-950/30" /> */}
